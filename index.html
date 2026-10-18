@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Law Academy | Νομική Εκπαίδευση & Προετοιμασία Διαγωνισμών</title>
+  <meta name="description" content="Κέντρο νομικής σκέψης, οργανωμένης μεθοδολογίας και συστηματικής προετοιμασίας για φοιτητές Νομικής και υποψηφίους δικαστικών διαγωνισμών.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Law Academy | Νομική Εκπαίδευση & Προετοιμασία Διαγωνισμών">
+  <meta property="og:description" content="Η Νομική απαιτεί κάτι περισσότερο από διάβασμα. Συστηματική προετοιμασία ΕΣΔΙ, Συμβολαιογράφων και φοιτητών Νομικής.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond & Cinzel (Title Serifs) + Plus Jakarta Sans (Clean Body Sans-Serif) with Greek subset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       ΧΡΩΜΑΤΙΚΗ ΠΑΛΕΤΑ ΑΠΟΛΥΤΑ ΣΥΝΔΕΔΕΜΕΝΗ ΜΕ ΤΟ ΛΟΓΟΤΥΠΟ (SOLID & MINIMAL)
+       - Primary Navy: #0E1F2F (αυθεντικό midnight navy από το 'L' και τη ζυγαριά)
+       - Navy Dark: #07121C
+       - Navy Soft: #152A3D
+       - Antique Gold: #A97937 (αυθεντικό gold από το 'A' και το αστέρι)
+       - Gold Light: #C49652
+       - Gold Warm: #E2BC7E
+       - Gold Subtle: rgba(169, 121, 55, 0.12)
+       - Clean Solid Off-White: #FAF9F7 (καθαρό, ακαδημαϊκό, χωρίς θολώματα)
+       - Crisp Card White: #FFFFFF
+       - Subtle Border: #E5E0D8
+       ========================================================================== */
+    :root {
+      --color-navy: #0E1F2F;
+      --color-navy-dark: #07121C;
+      --color-navy-soft: #152A3D;
+      --color-navy-card: #112335;
+      
+      --color-gold: #A97937;
+      --color-gold-light: #C49652;
+      --color-gold-warm: #E2BC7E;
+      --color-gold-border: rgba(169, 121, 55, 0.38);
+      --color-gold-subtle: rgba(169, 121, 55, 0.08);
+
+      --color-bg-page: #FAF9F7;
+      --color-surface-white: #FFFFFF;
+      --color-surface-card: #FFFFFF;
+      --color-border-subtle: #E5E0D8;
+
+      --color-text-main: #0E1F2F;
+      --color-text-muted: #536271;
+      --color-text-light: #F8F6F7;
+
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Space Grotesk', monospace, sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 2px 8px rgba(14, 31, 47, 0.04);
+      --shadow-card: 0 10px 30px rgba(14, 31, 47, 0.06);
+      --shadow-hover: 0 18px 45px rgba(14, 31, 47, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg-page);
+      color: var(--color-text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================================================
+       1. OFFICIAL EUROPEAN UNION & ΕΣΠΑ / ΔΥΠΑ (ΟΑΕΔ) STRIP
+       ========================================================================== */
+    .eu-funding-bar {
+      background: #07121C;
+      color: #F8FAFC;
+      border-bottom: 2px solid var(--color-gold);
+      padding: 8px 0;
+      font-size: 13px;
+      position: relative;
+      z-index: 1000;
+    }
+    .eu-funding-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .eu-emblem-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eu-flag-icon {
+      width: 30px;
+      height: 20px;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+    .eu-funding-text {
+      letter-spacing: 0.2px;
+      font-weight: 500;
+      font-size: 12.5px;
+    }
+    .eu-funding-text strong {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+    .eu-funding-text span {
+      color: var(--color-gold-warm);
+      font-weight: 600;
+    }
+    .eu-funding-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .eu-funding-links a {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .eu-funding-links a:hover {
+      color: var(--color-gold-warm);
+    }
+
+    /* ==========================================================================
+       2. HEADER (ΚΕΦΑΛΙΔΑ) ME ΜΕΓΑΛΟ, ΠΕΡΙΟΠΤΟ ΛΟΓΟΤΥΠΟ (64px - 76px)
+       ========================================================================== */
+    header.site-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 20px rgba(14, 31, 47, 0.04);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    /* Μεγάλο, ευκρινές λογότυπο στο Header */
+    .brand-logo-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      padding: 4px 6px;
+      border: 1.5px solid var(--color-gold-border);
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 10px rgba(169, 121, 55, 0.12);
+      transition: all 0.25s ease;
+    }
+    .brand-link:hover .brand-logo-frame {
+      border-color: var(--color-gold);
+      box-shadow: 0 4px 16px rgba(169, 121, 55, 0.25);
+    }
+    .brand-logo-img {
+      height: 72px; /* 64px - 80px requirement */
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--color-navy);
+      line-height: 1.1;
+    }
+    .brand-title span {
+      color: var(--color-gold);
+    }
+    .brand-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    /* Desktop Navigation Links */
+    .site-nav {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .site-nav a {
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-navy);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.4rem 0;
+    }
+    .site-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-gold);
+      transition: width 0.25s ease;
+    }
+    .site-nav a:hover {
+      color: var(--color-gold);
+    }
+    .site-nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Κουμπιά & CTAs */
+    .btn-brand-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.9rem;
+      background: var(--color-navy);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 15px rgba(14, 31, 47, 0.15);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .btn-brand-primary:hover {
+      background: var(--color-gold);
+      color: var(--color-navy-dark);
+      border-color: var(--color-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(169, 121, 55, 0.32);
+    }
+
+    .btn-brand-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.9rem;
+      background: #FFFFFF;
+      color: var(--color-navy);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .btn-brand-secondary:hover {
+      background: #FFFFFF;
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Hamburger */
+    .mobile-hamburger-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--color-gold-border);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--color-navy);
+    }
+    .mobile-hamburger-btn svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    /* Mobile Drawer */
+    .mobile-nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 18, 28, 0.85);
+      z-index: 10000;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-nav-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 320px;
+      max-width: 85%;
+      background: var(--color-navy-dark);
+      border-left: 2px solid var(--color-gold);
+      padding: 2.2rem 1.8rem;
+      z-index: 10001;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-nav-overlay.active .mobile-nav-drawer {
+      transform: translateX(0);
+    }
+    .mobile-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(169, 121, 55, 0.3);
+    }
+    .mobile-drawer-close {
+      background: transparent;
+      border: none;
+      color: #CBD5E1;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+    .mobile-nav-list a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+    }
+    .mobile-nav-list a:hover {
+      color: var(--color-gold-warm);
+    }
+
+    /* Χρυσός Διαχωριστής με Αστέρι */
+    .brand-divider {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin: 1.2rem 0 1.6rem 0;
+      max-width: 260px;
+    }
+    .brand-divider.centered {
+      margin: 1.2rem auto 1.6rem auto;
+    }
+    .brand-divider .divider-line {
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, var(--color-gold), transparent);
+    }
+    .brand-divider.centered .divider-line {
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+    .brand-divider .divider-star {
+      color: var(--color-gold);
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    /* Επίσημος Υπέρτιτλος */
+    .category-overline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 0.8rem;
+    }
+    .category-overline::before,
+    .category-overline::after {
+      content: '✦';
+      font-size: 0.65rem;
+      color: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ 1: ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ (HERO SECTION - SOLID & MINIMAL)
+       * Πλήρης κατάργηση background image
+       * 100% καθαρή τυπογραφία, χωρίς θολώματα
+       * Επιβλητικό Κεντρικό Brand Badge με το επίσημο λογότυπο
+       ========================================================================== */
+    .hero-academic-solid {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border-subtle);
+      padding: 5.5rem 0 6rem;
+      position: relative;
+    }
+    .hero-grid-clean {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .hero-text-side h1.hero-main-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-text-side p.hero-body-text {
+      font-size: 1.18rem;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+      margin-bottom: 2.2rem;
+      max-width: 650px;
+    }
+    .hero-cta-row {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    /* 3 Benchmarks Bar */
+    .hero-benchmarks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border-subtle);
+    }
+    .benchmark-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .benchmark-number {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+    .benchmark-desc {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-navy);
+      text-transform: uppercase;
+      margin-top: 0.35rem;
+    }
+
+    /* Δεξιά: Επιβλητικό Κεντρικό Brand Showcase Card */
+    .hero-brand-card {
+      background: var(--color-bg-page);
+      border: 1px solid var(--color-gold-border);
+      border-top: 4px solid var(--color-navy);
+      border-radius: var(--radius-sm);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    /* Αναδειγμένο Showcase Αριστοτέλη κάτω από το Logo */
+    .aristotle-featured-showcase {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-subtle);
+      border-top: 3px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 2rem 1.6rem;
+      box-shadow: 0 4px 20px rgba(14, 31, 47, 0.05);
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .aristotle-featured-showcase:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-gold);
+    }
+    .featured-avatar-halo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 2.5px solid var(--color-gold);
+      padding: 3px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(169, 121, 55, 0.25);
+      margin-bottom: 1rem;
+    }
+    .featured-avatar-halo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .featured-figure-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .featured-era-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      background: var(--color-gold-subtle);
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      margin-bottom: 0.4rem;
+    }
+    .featured-figure-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.2rem;
+    }
+    .featured-figure-discipline {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .featured-quote-container {
+      background: var(--color-bg-page);
+      border-left: 3px solid var(--color-gold);
+      padding: 1rem 1.2rem;
+      border-radius: 4px;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      width: 100%;
+    }
+    .quote-ancient {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 0.4rem;
+    }
+    .quote-modern {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+    .featured-pillars-mini {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      width: 100%;
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 1rem;
+    }
+    .pillar-mini-tag {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--color-navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--color-bg-page);
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-subtle);
+    }
+    .pillar-mini-tag span {
+      color: var(--color-gold);
+      font-size: 0.8rem;
+    }
+    .hero-brand-logo-frame {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 1.5rem;
+      background: #FFFFFF;
+      border: 2px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(169, 121, 55, 0.15);
+    }
+    .hero-brand-logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .hero-brand-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--color-navy);
+      margin-bottom: 0.3rem;
+    }
+    .hero-brand-subtitle {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1.2rem;
+    }
+    .hero-brand-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--color-text-main);
+      line-height: 1.5;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border-subtle);
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ 2: ΔΙΚΑΣΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ (CLEAN BENTO GRID)
+       ========================================================================== */
+    .section-competitions {
+      padding: 6.5rem 0;
+      background: #FAF9F7;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+    .section-intro-centered {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto 3.8rem;
+    }
+    .section-intro-centered h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.6vw, 3rem);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .section-intro-centered p {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+    }
+
+    .competitions-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.8rem;
+    }
+    .comp-box-card {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 2.2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      cursor: pointer;
+    }
+    .comp-box-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+
+    .comp-pill-badge {
+      display: inline-block;
+      padding: 0.28rem 0.75rem;
+      background: var(--color-navy);
+      color: var(--color-gold);
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      margin-bottom: 1.2rem;
+      align-self: flex-start;
+    }
+    .comp-box-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 0.8rem;
+    }
+    .comp-box-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+    .comp-sub-features {
+      margin-top: 1.6rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(14, 31, 47, 0.08);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .comp-sub-features span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .comp-sub-features span::before {
+      content: '◆';
+      color: var(--color-gold);
+      font-size: 0.55rem;
+    }
+
+    .competitions-action-wrap {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ 3: Η LAW ACADEMY (SOLID DEEP NAVY ACADEMIC)
+       ========================================================================== */
+    .section-about-academic {
+      padding: 6.5rem 0;
+      background: var(--color-navy);
+      color: #FFFFFF;
+      position: relative;
+      border-top: 2px solid var(--color-gold);
+      border-bottom: 2px solid var(--color-gold);
+    }
+    .about-academic-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-academic-text h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.4vw, 2.9rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1.2rem;
+      line-height: 1.25;
+    }
+    .about-academic-text .about-lead-copy {
+      font-size: 1.15rem;
+      color: #CBD7E3;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .pillars-stack-clean {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    .pillar-clean-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(169, 121, 55, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+    .pillar-clean-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--color-gold);
+      transform: translateX(6px);
+    }
+    .pillar-clean-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--color-gold);
+      color: var(--color-navy-dark);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .pillar-clean-info strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--color-gold-warm);
+      margin-bottom: 0.35rem;
+    }
+    .pillar-clean-info p {
+      font-size: 0.9rem;
+      color: #CBD7E3;
+      line-height: 1.6;
+    }
+
+    /* Δεξιά: Επίσημη Πλακέτα Ιδρύματος με Ευκρινές Λογότυπο */
+    .about-institution-plaque {
+      background: var(--color-navy-dark);
+      border: 2px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 3.2rem 2.4rem;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .about-institution-plaque::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      border: 1px solid rgba(169, 121, 55, 0.25);
+      pointer-events: none;
+    }
+    .plaque-logo-box {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.5rem;
+      background: #FFFFFF;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1.5px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .plaque-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .plaque-name-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--color-gold);
+      margin-bottom: 0.5rem;
+    }
+    .plaque-quote-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.35rem;
+      color: #FFFFFF;
+      margin: 1.2rem 0;
+      line-height: 1.45;
+    }
+    .plaque-seal-tag {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ ΕΣΠΑ / ΔΥΠΑ (ΟΑΕΔ) COMPLIANCE
+       ========================================================================== */
+    .section-eu-compliance {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border-subtle);
+      padding: 3.5rem 0;
+    }
+    .eu-program-card-clean {
+      background: var(--color-bg-page);
+      border: 1.5px solid var(--color-gold-border);
+      border-radius: var(--radius-sm);
+      padding: 2.2rem 2.8rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .eu-flag-frame {
+      width: 64px;
+      height: 43px;
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .eu-flag-frame svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .eu-program-info-box h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--color-navy);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .eu-program-info-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ 4: ΕΠΙΚΟΙΝΩΝΙΑ (ΛΕΙΤΟΥΡΓΙΚΗ ΦΟΡΜΑ ΜΕ VALIDATION & LOCALSTORAGE)
+       ========================================================================== */
+    .section-contact-area {
+      padding: 6.5rem 0;
+      background: var(--color-bg-page);
+      position: relative;
+    }
+    .contact-card-surface {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-subtle);
+      border-top: 4px solid var(--color-navy);
+      border-radius: var(--radius-sm);
+      padding: 3.8rem;
+      box-shadow: var(--shadow-card);
+    }
+    .contact-header-block {
+      text-align: center;
+      margin-bottom: 2.8rem;
+    }
+    .contact-header-block h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 0.8rem;
+    }
+    .contact-header-block p {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+    }
+
+    .form-pair-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-full-row {
+      margin-bottom: 1.5rem;
+    }
+    .form-group-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .form-group-item label {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-navy);
+      text-transform: uppercase;
+    }
+    .form-input-control {
+      width: 100%;
+      padding: 0.95rem 1.1rem;
+      background: var(--color-bg-page);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--color-navy);
+      transition: all 0.2s ease;
+    }
+    .form-input-control:focus {
+      outline: none;
+      background: #FFFFFF;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(169, 121, 55, 0.18);
+    }
+    .form-input-control.is-invalid {
+      border-color: #DC2626;
+      background: #FEF2F2;
+    }
+    .field-error-msg {
+      font-size: 0.78rem;
+      color: #DC2626;
+      font-weight: 600;
+      display: none;
+      margin-top: 2px;
+    }
+
+    .btn-submit-contact {
+      width: 100%;
+      padding: 1.1rem 2rem;
+      background: var(--color-navy);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      box-shadow: 0 4px 15px rgba(14, 31, 47, 0.15);
+      transition: all 0.25s ease;
+    }
+    .btn-submit-contact:hover:not(:disabled) {
+      background: var(--color-gold);
+      color: var(--color-navy-dark);
+      border-color: var(--color-gold-light);
+      box-shadow: 0 6px 22px rgba(169, 121, 55, 0.35);
+      transform: translateY(-2px);
+    }
+    .btn-submit-contact:disabled {
+      opacity: 0.75;
+      cursor: not-allowed;
+    }
+
+    /* Confirmation Toast / Banner */
+    .contact-success-toast {
+      display: none;
+      margin-top: 1.8rem;
+      padding: 1.2rem 1.5rem;
+      background: #F0FDF4;
+      border: 1px solid #86EFAC;
+      border-left: 4px solid #16A34A;
+      color: #166534;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .contact-success-toast strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ==========================================================================
+       MODAL DIALOG: ΔΙΑΔΡΑΣΤΙΚΟΣ ΟΔΗΓΟΣ ΔΙΑΓΩΝΙΣΜΩΝ
+       ========================================================================== */
+    .track-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 18, 28, 0.85);
+      z-index: 10050;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .track-modal-backdrop.active {
+      display: flex;
+    }
+    .track-modal-window {
+      background: #FFFFFF;
+      border: 2px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      max-width: 680px;
+      width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .track-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: transparent;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--color-navy);
+      line-height: 1;
+    }
+    .track-modal-close:hover {
+      color: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       FOOTER (ΥΠΟΣΕΛΙΔΟ) ME ΜΕΓΑΛΟ ΕΠΙΒΛΗΤΙΚΟ LOGO
+       ========================================================================== */
+    footer.site-footer-solid {
+      background: var(--color-navy-dark);
+      color: #94A3B8;
+      border-top: 2px solid var(--color-gold);
+      padding: 5rem 0 2rem;
+    }
+    .footer-top-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3.5rem;
+    }
+    /* Επιβλητικό Footer Logo */
+    .footer-brand-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .footer-logo-frame {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      padding: 6px 10px;
+      border: 2px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.4rem;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+    }
+    .footer-logo-img {
+      height: 76px; /* Επιβλητικό μέγεθος στο footer */
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .footer-brand-box p {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.7;
+      max-width: 420px;
+    }
+    .footer-col-nav h4 {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--color-gold-warm);
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .footer-col-nav ul {
+      list-style: none;
+    }
+    .footer-col-nav ul li {
+      margin-bottom: 0.65rem;
+    }
+    .footer-col-nav ul li a {
+      color: #CBD5E1;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+    .footer-col-nav ul li a:hover {
+      color: var(--color-gold);
+    }
+
+    /* FOOTER EU INSTITUTIONAL STRIP */
+    .footer-eu-institutional {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 1.4rem 0;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-eu-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-eu-flag {
+      width: 42px;
+      height: 28px;
+      border-radius: 2px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      flex-shrink: 0;
+    }
+    .footer-eu-title {
+      font-size: 0.88rem;
+      color: #E2E8F0;
+    }
+    .footer-eu-title strong {
+      color: #FFFFFF;
+    }
+    .footer-eu-right {
+      font-size: 0.82rem;
+      color: var(--color-gold-warm);
+      letter-spacing: 0.04em;
+    }
+    .footer-copyright-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE RULES (MOBILE & TABLET)
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .site-nav { display: none; }
+      .mobile-hamburger-btn { display: block; }
+      .hero-grid-clean { grid-template-columns: 1fr; gap: 3rem; }
+      .span-7, .span-5, .span-6 { grid-column: span 12; }
+      .about-academic-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .eu-program-card-clean { grid-template-columns: 1fr; text-align: center; }
+      .eu-flag-frame { margin: 0 auto; }
+      .form-pair-row { grid-template-columns: 1fr; }
+      .footer-top-row { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-card-surface { padding: 2.2rem 1.5rem; }
+      .hero-benchmarks-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+      .footer-eu-institutional { flex-direction: column; align-items: flex-start; }
+      .brand-logo-img { height: 60px; }
+      .brand-title { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. OFFICIAL EUROPEAN UNION & ΕΣΠΑ / ΔΥΠΑ CO-FUNDING STRIP
+       ======================================================================== -->
+  <div class="eu-funding-bar">
+    <div class="container eu-funding-inner">
+      <div class="eu-emblem-badge">
+        <svg class="eu-flag-icon" viewBox="0 0 810 540" xmlns="http://www.w3.org/2000/svg">
+          <rect width="810" height="540" fill="#003399"/>
+          <g fill="#FFCC00" transform="translate(405,270)">
+            <g id="star">
+              <polygon points="0,-30 8.8,-9.2 30.4,-9.2 13,-3.5 19.6,18.5 0,6 -19.6,18.5 -13,-3.5 -30.4,-9.2 -8.8,-9.2"/>
+            </g>
+            <use href="#star" transform="rotate(30) translate(0,-180)"/>
+            <use href="#star" transform="rotate(60) translate(0,-180)"/>
+            <use href="#star" transform="rotate(90) translate(0,-180)"/>
+            <use href="#star" transform="rotate(120) translate(0,-180)"/>
+            <use href="#star" transform="rotate(150) translate(0,-180)"/>
+            <use href="#star" transform="rotate(180) translate(0,-180)"/>
+            <use href="#star" transform="rotate(210) translate(0,-180)"/>
+            <use href="#star" transform="rotate(240) translate(0,-180)"/>
+            <use href="#star" transform="rotate(270) translate(0,-180)"/>
+            <use href="#star" transform="rotate(300) translate(0,-180)"/>
+            <use href="#star" transform="rotate(330) translate(0,-180)"/>
+            <use href="#star" transform="translate(0,-180)"/>
+          </g>
+        </svg>
+        <div class="eu-funding-text">
+          <strong>Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης</strong> | <span>NextGenerationEU • ΕΣΠΑ 2021-2027 • Προγράμματα ΔΥΠΑ (πρ. ΟΑΕΔ)</span>
+        </div>
+      </div>
+
+      <div class="eu-funding-links">
+        <a href="tel:+306941616959">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>6941616959</span>
+        </a>
+        <a href="mailto:lawacademyjk@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>lawacademyjk@gmail.com</span>
+        </a>
+        <a href="#eu-info">ΕΣΠΑ / ΔΥΠΑ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. HEADER ME ΜΕΓΑΛΟ, ΠΕΡΙΟΠΤΟ ΛΟΓΟΤΥΠΟ (64px - 80px)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link" title="Law Academy - Αρχική Σελίδα">
+        <div class="brand-logo-frame">
+          <img src="logo.jpg" alt="Law Academy Επίσημο Λογότυπο" class="brand-logo-img" data-cms-key="brand.logo">
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-title" data-cms-key="brand.name">LAW <span>ACADEMY</span></div>
+          <span class="brand-sub" data-cms-key="brand.subtitle">Ακαδημαϊκη Νομικη Μελετη</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="site-nav">
+        <li><a href="#students">Φοιτητές Νομικής</a></li>
+        <li><a href="#competitions">Δικαστικοί Διαγωνισμοί</a></li>
+        <li><a href="#about">Η Law Academy</a></li>
+        <li><a href="#eu-info">ΕΣΠΑ & ΔΥΠΑ</a></li>
+        <li><a href="#contact">Επικοινωνία</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <a href="#contact" class="btn-brand-primary" style="display: none; @media(min-width: 901px){display: inline-flex;}">
+          Επικοινωνία
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-hamburger-btn" onclick="toggleMobileNav(true)" aria-label="Άνοιγμα Μενού">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="if(event.target===this) toggleMobileNav(false)">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div class="mobile-drawer-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="background: #fff; padding: 4px; border-radius: 4px;">
+              <img src="logo.jpg" alt="Law Academy" style="height: 48px; display: block; object-fit: contain;">
+            </div>
+            <div style="color: #fff; font-family: var(--font-display); font-weight: 800;">LAW ACADEMY</div>
+          </div>
+          <button class="mobile-drawer-close" onclick="toggleMobileNav(false)" aria-label="Κλείσιμο Μενού">&times;</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="#students" onclick="toggleMobileNav(false)">Φοιτητές Νομικής</a></li>
+          <li><a href="#competitions" onclick="toggleMobileNav(false)">Δικαστικοί Διαγωνισμοί</a></li>
+          <li><a href="#about" onclick="toggleMobileNav(false)">Η Law Academy</a></li>
+          <li><a href="#eu-info" onclick="toggleMobileNav(false)">Προγράμματα ΕΣΠΑ / ΔΥΠΑ</a></li>
+          <li><a href="#contact" onclick="toggleMobileNav(false)">Επικοινωνία</a></li>
+        </ul>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1.5rem; font-size: 0.85rem; color: #94A3B8;">
+        <p style="color: var(--color-gold-warm); font-weight: 700; margin-bottom: 4px;">LAW ACADEMY</p>
+        <p>Ακαδημαϊκή Υπεροχή & Νομική Μεθοδολογία</p>
+        <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+          <a href="tel:+306941616959" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 8px; font-weight: 600;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-warm)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>6941616959</span>
+          </a>
+          <a href="mailto:lawacademyjk@gmail.com" style="color: var(--color-gold-warm); text-decoration: none; display: flex; align-items: center; gap: 8px; font-size: 0.82rem; word-break: break-all;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>lawacademyjk@gmail.com</span>
+          </a>
+        </div>
+        <div style="margin-top: 15px;">
+          <a href="#contact" onclick="toggleMobileNav(false)" class="btn-brand-primary" style="width: 100%; justify-content: center;">
+            Επικοινωνησε μαζι μας
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 1: ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ (Hero Section - Solid, Clean, Minimal)
+         * Πλήρης κατάργηση background images
+         * Ακριβές Copywriting: «Μην απομνημονεύεις απλώς. Κατανόησε.»
+         * Κεντρικό επιβλητικό Brand Badge
+         ======================================================================== -->
+    <section id="students" class="hero-academic-solid">
+      <div class="container">
+        <div class="hero-grid-clean">
+          
+          <!-- Αριστερή Στήλη: Copywriting & CTAs -->
+          <div class="hero-text-side">
+            <span class="category-overline" data-cms-key="hero.category">ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ</span>
+            
+            <h1 class="hero-main-title" data-cms-key="hero.title">Η Νομική απαιτεί κάτι περισσότερο από διάβασμα.</h1>
+            
+            <div class="brand-divider">
+              <span class="divider-line"></span>
+              <span class="divider-star">✦</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <p class="hero-body-text" data-cms-key="hero.body">
+              Ανακάλυψε περιεχόμενο και πρακτικές ιδέες για την οργάνωση της μελέτης σου και την κατανόηση των νομικών εννοιών.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#contact" class="btn-brand-primary" data-cms-key="hero.cta">
+                <span>Επικοινώνησε μαζί μας</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#competitions" class="btn-brand-secondary">
+                <span>Δικαστικοί Διαγωνισμοί</span>
+              </a>
+            </div>
+
+            <!-- Στατιστικοί Δείκτες Κύρους -->
+            <div class="hero-benchmarks-grid">
+              <div class="benchmark-col">
+                <span class="benchmark-number">100%</span>
+                <span class="benchmark-desc">Ουσιαστική Κατανόηση</span>
+              </div>
+              <div class="benchmark-col">
+                <span class="benchmark-number">3 Στάδια</span>
+                <span class="benchmark-desc">Μεθοδολογία Μελέτης</span>
+              </div>
+              <div class="benchmark-col">
+                <span class="benchmark-number">Πρακτική</span>
+                <span class="benchmark-desc">Επίλυση Υποθέσεων</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Δεξιά Στήλη: Επιβλητικό Κεντρικό Brand Badge & Έμβλημα -->
+          <div class="hero-brand-card">
+            <!-- Επίσημο Λογότυπο πάνω-πάνω -->
+            <div class="hero-brand-logo-frame">
+              <img src="logo.jpg" alt="Law Academy Official Emblem" data-cms-key="brand.logo">
+            </div>
+            <div class="hero-brand-title">LAW ACADEMY</div>
+            <div class="hero-brand-subtitle">Κεντρο Νομικης Μεθοδολογιας</div>
+
+            <div class="brand-divider centered">
+              <span class="divider-line"></span>
+              <span class="divider-star">✦</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <!-- Αναδειγμένο Showcase: Αριστοτέλης & Φιλοσοφία του Δικαίου -->
+            <div class="aristotle-featured-showcase">
+              <div class="featured-avatar-halo">
+                <img src="images/aristotle.jpg" alt="Προτομή Αριστοτέλη">
+              </div>
+              
+              <div class="featured-figure-meta">
+                <span class="featured-era-badge">384 – 322 π.Χ.</span>
+                <h3 class="featured-figure-name">Αριστοτέλης</h3>
+                <span class="featured-figure-discipline">Φιλοσοφία του Δικαίου & Επιείκεια</span>
+              </div>
+
+              <div class="featured-quote-container">
+                <div class="quote-ancient">«Ὁ νόμος ἐστὶ νοῦς ἄνευ ὀρέξεως.»</div>
+                <div class="quote-modern">Ο νόμος είναι καθαρός νους, ελεύθερος από ανθρώπινα πάθη και υποκειμενικότητες.</div>
+              </div>
+
+              <div class="featured-pillars-mini">
+                <span class="pillar-mini-tag"><span>⚖</span> Δογματική Συνέπεια</span>
+                <span class="pillar-mini-tag"><span>✦</span> Τελολογική Ερμηνεία</span>
+                <span class="pillar-mini-tag"><span>🏛</span> Νομικός Λόγος</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 2: ΔΙΚΑΣΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ
+         * Ακριβές Copywriting: «Η προετοιμασία ξεκινά από το σωστό πλάνο.»
+         ======================================================================== -->
+    <section id="competitions" class="section-competitions">
+      <div class="container">
+        <div class="section-intro-centered">
+          <span class="category-overline" data-cms-key="exams.category">ΔΙΚΑΣΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ</span>
+          <h2 data-cms-key="exams.title">Η προετοιμασία ξεκινά από το σωστό πλάνο.</h2>
+          <div class="brand-divider centered">
+            <span class="divider-line"></span>
+            <span class="divider-star">✦</span>
+            <span class="divider-line"></span>
+          </div>
+          <p data-cms-key="exams.body">
+            Η μεγάλη εξεταστέα ύλη χρειάζεται μεθοδικότητα. Εξερεύνησε τις βασικές αρχές οργάνωσης, κατανόησης και επανάληψης που μπορούν να υποστηρίξουν την ατομική σου μελέτη.
+          </p>
+        </div>
+
+        <div class="competitions-cards-grid">
+          <!-- Κάρτα 1: ΕΣΔΙ Πολιτική / Ποινική -->
+          <div class="comp-box-card span-7" onclick="openTrackModal('esdi-civil')">
+            <div>
+              <span class="comp-pill-badge">ΕΣΔΙ &bull; ΠΟΛΙΤΙΚΗ & ΠΟΙΝΙΚΗ</span>
+              <h3>Εθνική Σχολή Δικαστικών Λειτουργών</h3>
+              <p>
+                Συστηματικό πλάνο μελέτης για Αστικό, Ποινικό και τις αντίστοιχες Δικονομίες. Έμφαση στη μελέτη πρόσφατης νομολογίας του Αρείου Πάγου και στην άρτια δομή επίλυσης θεμάτων.
+              </p>
+            </div>
+            <div class="comp-sub-features">
+              <span>Ουσιαστικό & Δικονομικό Δίκαιο</span>
+              <span>Επεξεργασία Νομολογίας</span>
+              <span>Κυκλικές Επαναλήψεις</span>
+            </div>
+          </div>
+
+          <!-- Κάρτα 2: ΕΣΔΙ Διοικητική -->
+          <div class="comp-box-card span-5" onclick="openTrackModal('esdi-admin')">
+            <div>
+              <span class="comp-pill-badge">ΕΣΔΙ &bull; ΔΙΟΙΚΗΤΙΚΗ</span>
+              <h3>Διοικητική Δικαιοσύνη</h3>
+              <p>
+                Στοχευμένη οργάνωση Συνταγματικού, Γενικού Διοικητικού Δικαίου, Ακυρωτικού Ελέγχου και φορολογικών διαφορών με ανάλυση αποφάσεων ΣτΕ.
+              </p>
+            </div>
+            <div class="comp-sub-features">
+              <span>Ακυρωτικές Διαφορές</span>
+              <span>Νομολογία ΣτΕ</span>
+            </div>
+          </div>
+
+          <!-- Κάρτα 3: Συμβολαιογράφοι & Ειρηνοδίκες -->
+          <div class="comp-box-card span-6" onclick="openTrackModal('notaries')">
+            <div>
+              <span class="comp-pill-badge">ΣΥΜΒΟΛΑΙΟΓΡΑΦΟΙ & ΕΙΡΗΝΟΔΙΚΕΣ</span>
+              <h3>Διαγωνισμοί Συμβολαιογράφων</h3>
+              <p>
+                Εμβάθυνση στο Εμπράγματο, Κληρονομικό και Ενοχικό Δίκαιο με ανάλυση συμβατικών σχημάτων, κτηματολογικών διατάξεων και ακριβούς νομικής ορολογίας.
+              </p>
+            </div>
+            <div class="comp-sub-features">
+              <span>Αστικό Δίκαιο</span>
+              <span>Κτηματολόγιο</span>
+              <span>Πρακτικά Συμβολαίων</span>
+            </div>
+          </div>
+
+          <!-- Κάρτα 4: ΝΣΚ -->
+          <div class="comp-box-card span-6" onclick="openTrackModal('nsk')">
+            <div>
+              <span class="comp-pill-badge">ΝΣΚ &bull; ΝΟΜΙΚΟ ΣΥΜΒΟΥΛΙΟ</span>
+              <h3>Νομικό Συμβούλιο του Κράτους</h3>
+              <p>
+                Υψηλό επίπεδο προετοιμασίας για την υπεράσπιση των συμφερόντων του Δημοσίου, διοικητικές συμβάσεις, γνωμοδοτήσεις και δικαστική εκπροσώπηση.
+              </p>
+            </div>
+            <div class="comp-sub-features">
+              <span>Δημόσιο Συμφέρον</span>
+              <span>Δημόσιες Συμβάσεις</span>
+              <span>Γνωμοδοτική Διαδικασία</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="competitions-action-wrap">
+          <button type="button" class="btn-brand-primary" onclick="openTrackModal('general')" data-cms-key="exams.cta">
+            <span>Μάθε περισσότερα</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 3: Η LAW ACADEMY (ABOUT / ΦΙΛΟΣΟΦΙΑ)
+         * Ακριβές Copywriting: «Η γνώση έχει αξία όταν μπορείς να την εφαρμόσεις.»
+         ======================================================================== -->
+    <section id="about" class="section-about-academic">
+      <div class="container">
+        <div class="about-academic-grid">
+          
+          <div class="about-academic-text">
+            <span class="category-overline" style="color: var(--color-gold-warm);" data-cms-key="about.category">Η LAW ACADEMY</span>
+            <h2 data-cms-key="about.title">Η γνώση έχει αξία όταν μπορείς να την εφαρμόσεις.</h2>
+            <div class="brand-divider">
+              <span class="divider-line" style="background: linear-gradient(90deg, var(--color-gold-warm), transparent);"></span>
+              <span class="divider-star" style="color: var(--color-gold-warm);">✦</span>
+              <span class="divider-line" style="background: transparent;"></span>
+            </div>
+            <p class="about-lead-copy" data-cms-key="about.body">
+              Το LAW ACADEMY αναδεικνύει τη σημασία της ουσιαστικής κατανόησης της Νομικής, της κριτικής σκέψης και της οργανωμένης μελέτης, μέσα από περιεχόμενο για τη νομική επιστήμη.
+            </p>
+
+            <div class="pillars-stack-clean">
+              <div class="pillar-clean-card">
+                <div class="pillar-clean-icon">✦</div>
+                <div class="pillar-clean-info">
+                  <strong>Ουσιαστική Κατανόηση</strong>
+                  <p>Απαλλαγή από την τυφλή αποστήθιση. Ανάλυση της ratio legis και της δογματικής συνοχής κάθε διάταξης.</p>
+                </div>
+              </div>
+
+              <div class="pillar-clean-card">
+                <div class="pillar-clean-icon">⚖</div>
+                <div class="pillar-clean-info">
+                  <strong>Κριτική Σκέψη</strong>
+                  <p>Σύνθεση αντικρουόμενων νομικών γνωμών και οικοδόμηση αδιάσειστης επιχειρηματολογίας για κάθε πρακτικό ζήτημα.</p>
+                </div>
+              </div>
+
+              <div class="pillar-clean-card">
+                <div class="pillar-clean-icon">🏛</div>
+                <div class="pillar-clean-info">
+                  <strong>Οργανωμένη Μελέτη</strong>
+                  <p>Σαφές χρονοδιάγραμμα, κατηγοριοποίηση της εξεταστέας ύλης και μεθοδικό πρωτόκολλο επανάληψης.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn-brand-primary" style="background: var(--color-gold); color: var(--color-navy-dark);" data-cms-key="about.cta">
+              <span>Επικοινώνησε μαζί μας</span>
+            </a>
+          </div>
+
+          <!-- Δεξιά Στήλη: Επίσημη Πλακέτα Ιδρύματος με Ευκρινές Logo -->
+          <div class="about-institution-plaque">
+            <div class="plaque-logo-box">
+              <img src="logo.jpg" alt="Law Academy Emblem" data-cms-key="brand.logo">
+            </div>
+            <div class="plaque-name-title">LAW ACADEMY</div>
+            <div class="brand-divider centered">
+              <span class="divider-line"></span>
+              <span class="divider-star">✦</span>
+              <span class="divider-line"></span>
+            </div>
+            <div class="plaque-quote-text">«Η νομική επιστήμη δεν είναι απομνημόνευση λέξεων, αλλά κατανόηση του δικαίου.»</div>
+            <div class="plaque-seal-tag">ΑΡΙΣΤΕΙΑ &bull; ΜΕΘΟΔΟΣ &bull; ΔΙΚΑΙΟΣΥΝΗ</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ ΕΣΠΑ / ΔΥΠΑ (ΟΑΕΔ) COMPLIANCE
+         ======================================================================== -->
+    <section class="section-eu-compliance" id="eu-info">
+      <div class="container">
+        <div class="eu-program-card-clean">
+          <div class="eu-flag-frame">
+            <svg viewBox="0 0 810 540" xmlns="http://www.w3.org/2000/svg">
+              <rect width="810" height="540" fill="#003399"/>
+              <g fill="#FFCC00" transform="translate(405,270)">
+                <g id="star-eu">
+                  <polygon points="0,-30 8.8,-9.2 30.4,-9.2 13,-3.5 19.6,18.5 0,6 -19.6,18.5 -13,-3.5 -30.4,-9.2 -8.8,-9.2"/>
+                </g>
+                <use href="#star-eu" transform="rotate(30) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(60) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(90) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(120) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(150) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(180) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(210) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(240) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(270) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(300) translate(0,-180)"/>
+                <use href="#star-eu" transform="rotate(330) translate(0,-180)"/>
+                <use href="#star-eu" transform="translate(0,-180)"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="eu-program-info-box">
+            <h4>Συγχρηματοδότηση Ευρωπαϊκών Εκπαιδευτικών Δράσεων & Ψηφιακής Δικαιοσύνης</h4>
+            <p>
+              Τα προγράμματα εξ αποστάσεως νομικής εκπαίδευσης και ψηφιακής νομολογιακής έρευνας της Law Academy υλοποιούνται με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης μέσω του Ευρωπαϊκού Κοινωνικού Ταμείου (ΕΚΤ+), του προγράμματος <strong>NextGenerationEU / ΕΣΠΑ 2021-2027</strong> και επιταγών κατάρτισης <strong>ΔΥΠΑ (πρ. ΟΑΕΔ)</strong>.
+            </p>
+          </div>
+
+          <div>
+            <a href="#contact" class="btn-brand-primary" style="white-space: nowrap; font-size: 0.8rem; padding: 0.75rem 1.4rem;">
+              <span>Πληροφορίες ΕΣΠΑ / ΔΥΠΑ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 4: ΕΠΙΚΟΙΝΩΝΙΑ (ΟΛΟΚΛΗΡΩΜΕΝΗ & ΛΕΙΤΟΥΡΓΙΚΗ ΦΟΡΜΑ)
+         * Ακριβές Copywriting
+         * Client-side validation
+         * Δομημένη αποθήκευση στο localStorage ('law_academy_messages')
+         * Async submitContactForm(payload) handler έτοιμο για API
+         ======================================================================== -->
+    <section id="contact" class="section-contact-area">
+      <div class="container">
+        <div class="contact-card-surface">
+          <div class="contact-header-block">
+            <span class="category-overline" data-cms-key="contact.category">ΕΠΙΚΟΙΝΩΝΙΑ</span>
+            <h2 data-cms-key="contact.title">Θέλεις να μάθεις περισσότερα;</h2>
+            <div class="brand-divider centered">
+              <span class="divider-line"></span>
+              <span class="divider-star">✦</span>
+              <span class="divider-line"></span>
+            </div>
+            <p data-cms-key="contact.body">
+              Στείλε μας το μήνυμά σου και επικοινώνησε με το LAW ACADEMY.
+            </p>
+
+            <!-- Direct Contact Badges -->
+            <div style="display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-top: 1.4rem;">
+              <a href="tel:+306941616959" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF9F7; border: 1.5px solid var(--color-gold-border); padding: 9px 18px; border-radius: var(--radius-sm); color: var(--color-navy); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.2s ease;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>6941616959</span>
+              </a>
+              <a href="mailto:lawacademyjk@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; background: #FAF9F7; border: 1.5px solid var(--color-gold-border); padding: 9px 18px; border-radius: var(--radius-sm); color: var(--color-navy); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: all 0.2s ease;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>lawacademyjk@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <form id="contactFormOfficial" onsubmit="handleFormSubmission(event)" novalidate>
+            <div class="form-pair-row">
+              <div class="form-group-item">
+                <label for="fullName">Ονοματεπώνυμο *</label>
+                <input type="text" id="fullName" name="fullName" class="form-input-control" placeholder="π.χ. Αλέξανδρος Παπαδόπουλος" required autocomplete="name">
+                <span class="field-error-msg" id="err-fullName">Παρακαλούμε εισάγετε το ονοματεπώνυμό σας.</span>
+              </div>
+              <div class="form-group-item">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-input-control" placeholder="name@example.com" required autocomplete="email">
+                <span class="field-error-msg" id="err-email">Παρακαλούμε εισάγετε ένα έγκυρο email.</span>
+              </div>
+            </div>
+
+            <div class="form-full-row form-group-item">
+              <label for="subject">Θέμα *</label>
+              <select id="subject" name="subject" class="form-input-control" required>
+                <option value="" disabled selected>Επιλέξτε θέμα ενδιαφέροντος...</option>
+                <option value="students">Φοιτητής Νομικής</option>
+                <option value="judges">Δικαστικοί Διαγωνισμοί</option>
+                <option value="other">Άλλο</option>
+              </select>
+              <span class="field-error-msg" id="err-subject">Παρακαλούμε επιλέξτε ένα θέμα.</span>
+            </div>
+
+            <div class="form-full-row form-group-item">
+              <label for="message">Μήνυμα *</label>
+              <textarea id="message" name="message" rows="4" class="form-input-control" placeholder="Γράψτε εδώ το ερώτημά σας ή τους στόχους μελέτης σας..." required></textarea>
+              <span class="field-error-msg" id="err-message">Παρακαλούμε συμπληρώστε το μήνυμά σας (τουλάχιστον 5 χαρακτήρες).</span>
+            </div>
+
+            <button type="submit" id="btnSubmitContact" class="btn-submit-contact" data-cms-key="contact.cta">
+              <span id="btnSubmitText">Αποστολή μηνύματος</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+
+            <!-- Confirmation Banner / Toast -->
+            <div id="contactToastSuccess" class="contact-success-toast" role="alert">
+              <strong>✓ Το μήνυμά σας καταχωρήθηκε επιτυχώς!</strong>
+              Ευχαριστούμε για το ενδιαφέρον σας. Η ακαδημαϊκή ομάδα του LAW ACADEMY παρέλαβε το αίτημά σας και θα επικοινωνήσει μαζί σας σύντομα.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MODAL DIALOG: ΑΝΑΛΥΤΙΚΟΣ ΟΔΗΓΟΣ ΔΙΑΓΩΝΙΣΜΩΝ
+       ======================================================================== -->
+  <div class="track-modal-backdrop" id="trackModalBackdrop" onclick="if(event.target===this) closeTrackModal()">
+    <div class="track-modal-window">
+      <button class="track-modal-close" onclick="closeTrackModal()" aria-label="Κλείσιμο">&times;</button>
+      <div id="trackModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER (ΥΠΟΣΕΛΙΔΟ) ME ΜΕΓΑΛΟ ΕΠΙΒΛΗΤΙΚΟ ΛΟΓΟΤΥΠΟ
+       ======================================================================== -->
+  <footer class="site-footer-solid">
+    <div class="container">
+      <div class="footer-top-row">
+        <!-- Μεγάλο Footer Brand Logo -->
+        <div class="footer-brand-box">
+          <div class="footer-logo-frame">
+            <img src="logo.jpg" alt="Law Academy" class="footer-logo-img" data-cms-key="brand.logo">
+          </div>
+          <p>
+            Κέντρο νομικής σκέψης, οργανωμένης μεθοδολογίας και συστηματικής προετοιμασίας για φοιτητές Νομικής και υποψηφίους δικαστικών διαγωνισμών.
+          </p>
+        </div>
+
+        <div class="footer-col-nav">
+          <h4>Ενότητες</h4>
+          <ul>
+            <li><a href="#students">Φοιτητές Νομικής</a></li>
+            <li><a href="#competitions">Δικαστικοί Διαγωνισμοί</a></li>
+            <li><a href="#about">Η Law Academy</a></li>
+            <li><a href="#eu-info">Προγράμματα ΕΣΠΑ / ΔΥΠΑ</a></li>
+            <li><a href="#contact">Επικοινωνία</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-nav">
+          <h4>Επικοινωνία</h4>
+          <ul>
+            <li>Αθήνα, Ελλάδα</li>
+            <li>
+              <a href="mailto:lawacademyjk@gmail.com" style="color: var(--color-gold-warm); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>lawacademyjk@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+306941616959" style="color: var(--color-gold-warm); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>6941616959</span>
+              </a>
+            </li>
+            <li>Δευτέρα &ndash; Παρασκευή: 09:00 &ndash; 20:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- OFFICIAL EU CO-FUNDING INSTITUTIONAL FOOTER STRIP -->
+      <div class="footer-eu-institutional">
+        <div class="footer-eu-left">
+          <svg class="footer-eu-flag" viewBox="0 0 810 540" xmlns="http://www.w3.org/2000/svg">
+            <rect width="810" height="540" fill="#003399"/>
+            <g fill="#FFCC00" transform="translate(405,270)">
+              <g id="star-footer">
+                <polygon points="0,-30 8.8,-9.2 30.4,-9.2 13,-3.5 19.6,18.5 0,6 -19.6,18.5 -13,-3.5 -30.4,-9.2 -8.8,-9.2"/>
+              </g>
+              <use href="#star-footer" transform="rotate(30) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(60) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(90) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(120) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(150) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(180) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(210) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(240) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(270) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(300) translate(0,-180)"/>
+              <use href="#star-footer" transform="rotate(330) translate(0,-180)"/>
+              <use href="#star-footer" transform="translate(0,-180)"/>
+            </g>
+          </svg>
+          <div class="footer-eu-title">
+            <strong>Ευρωπαϊκή Ένωση</strong> &mdash; Ευρωπαϊκό Κοινωνικό Ταμείο (ΕΚΤ+) | Πρόγραμμα NextGenerationEU &bull; ΕΣΠΑ 2021-2027 &bull; ΔΥΠΑ (πρ. ΟΑΕΔ)
+          </div>
+        </div>
+
+        <div class="footer-eu-right">
+          Εθνικό Σχέδιο Ανάκαμψης και Ανθεκτικότητας «Ελλάδα 2.0»
+        </div>
+      </div>
+
+      <div class="footer-copyright-bar">
+        <span>&copy; 2026 Law Academy &bull; Όλα τα δικαιώματα διατηρούνται.</span>
+        <span style="font-family: var(--font-display); letter-spacing: 0.12em; color: var(--color-gold);">EXCELLENCE IN LEGAL EDUCATION</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       ARCHITECTURAL JAVASCRIPT: DATA-DRIVEN CONTENT + ADMIN-READY HOOKS
+       ======================================================================== -->
+  <script>
+    /* ========================================================================
+       [ADMIN-PANEL-HOOK] 1. DATA-DRIVEN CONTENT CONFIGURATION (CMS STATE)
+       Όταν συνδεθεί το Admin Panel, οι τιμές αυτές θα φορτώνονται δυναμικά
+       από το REST API (π.χ. GET /api/v1/content) ή το localStorage.
+       ======================================================================== */
+    const siteContent = {
+      brand: {
+        name: "LAW ACADEMY",
+        subtitle: "Ακαδημαϊκη Νομικη Μελετη",
+        logo: "logo.jpg"
+      },
+      hero: {
+        category: "ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ",
+        title: "Η Νομική απαιτεί κάτι περισσότερο από διάβασμα.",
+        body: "Ανακάλυψε περιεχόμενο και πρακτικές ιδέες για την οργάνωση της μελέτης σου και την κατανόηση των νομικών εννοιών.",
+        cta: "Επικοινώνησε μαζί μας"
+      },
+      exams: {
+        category: "ΔΙΚΑΣΤΙΚΟΙ ΔΙΑΓΩΝΙΣΜΟΙ",
+        title: "Η προετοιμασία ξεκινά από το σωστό πλάνο.",
+        body: "Η μεγάλη εξεταστέα ύλη χρειάζεται μεθοδικότητα. Εξερεύνησε τις βασικές αρχές οργάνωσης, κατανόησης και επανάληψης που μπορούν να υποστηρίξουν την ατομική σου μελέτη.",
+        cta: "Μάθε περισσότερα"
+      },
+      about: {
+        category: "Η LAW ACADEMY",
+        title: "Η γνώση έχει αξία όταν μπορείς να την εφαρμόσεις.",
+        body: "Το LAW ACADEMY αναδεικνύει τη σημασία της ουσιαστικής κατανόησης της Νομικής, της κριτικής σκέψης και της οργανωμένης μελέτης, μέσα από περιεχόμενο για τη νομική επιστήμη.",
+        cta: "Επικοινώνησε μαζί μας"
+      },
+      contact: {
+        category: "ΕΠΙΚΟΙΝΩΝΙΑ",
+        title: "Θέλεις να μάθεις περισσότερα;",
+        body: "Στείλε μας το μήνυμά σου και επικοινώνησε με το LAW ACADEMY.",
+        cta: "Αποστολή μηνύματος"
+      }
+    };
+
+    // [ADMIN-PANEL-HOOK] Συνάρτηση συγχρονισμού CMS State με το DOM
+    function applyCmsContent(contentObj) {
+      document.querySelectorAll('[data-cms-key]').forEach(el => {
+        const key = el.getAttribute('data-cms-key');
+        const value = key.split('.').reduce((acc, part) => acc && acc[part], contentObj);
+        if (value !== undefined) {
+          if (el.tagName === 'IMG') {
+            el.src = value;
+          } else {
+            // Αν περιέχει span ή εικονίδιο, προστατεύουμε τη δομή
+            const span = el.querySelector('span');
+            if (span && el.tagName === 'A') {
+              span.textContent = value;
+            } else {
+              el.textContent = value;
+            }
+          }
+        }
+      });
+    }
+
+    // ========================================================================
+    // MOBILE NAVIGATION DRAWER
+    // ========================================================================
+    function toggleMobileNav(open) {
+      const overlay = document.getElementById('mobileNavOverlay');
+      if (open) {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // ========================================================================
+    // [ADMIN-PANEL-HOOK] 2. CONTACT FORM SUBMISSION & INBOX STORAGE
+    // ========================================================================
+    const STORAGE_KEY_MESSAGES = 'law_academy_messages';
+
+    // Helper: Valid Email Regex
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    }
+
+    // [ADMIN-PANEL-HOOK] Mock Async API Function (Ready for REST Endpoint)
+    async function submitContactForm(payload) {
+      // Σε περιβάλλον παραγωγής:
+      // return await fetch('/api/v1/inbox/submit', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(payload)
+      // });
+      return new Promise((resolve) => setTimeout(resolve, 600));
+    }
+
+    // [ADMIN-PANEL-HOOK] LocalStorage Inbox Storage
+    function saveMessageToInbox(messageItem) {
+      try {
+        const currentMessages = JSON.parse(localStorage.getItem(STORAGE_KEY_MESSAGES) || '[]');
+        currentMessages.unshift(messageItem);
+        localStorage.setItem(STORAGE_KEY_MESSAGES, JSON.stringify(currentMessages));
+        return true;
+      } catch (err) {
+        console.error('Failed to save to localStorage:', err);
+        return false;
+      }
+    }
+
+    // Main Form Handler with Validation
+    async function handleFormSubmission(event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById('fullName');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+      const toast = document.getElementById('contactToastSuccess');
+      const submitBtn = document.getElementById('btnSubmitContact');
+      const submitBtnText = document.getElementById('btnSubmitText');
+
+      let isValid = true;
+
+      // Reset previous error states
+      [fullName, email, subject, message].forEach(input => {
+        input.classList.remove('is-invalid');
+        const errEl = document.getElementById(`err-${input.id}`);
+        if (errEl) errEl.style.display = 'none';
+      });
+
+      // Validation 1: Full Name
+      if (!fullName.value.trim()) {
+        fullName.classList.add('is-invalid');
+        document.getElementById('err-fullName').style.display = 'block';
+        isValid = false;
+      }
+
+      // Validation 2: Email
+      if (!isValidEmail(email.value)) {
+        email.classList.add('is-invalid');
+        document.getElementById('err-email').style.display = 'block';
+        isValid = false;
+      }
+
+      // Validation 3: Subject
+      if (!subject.value) {
+        subject.classList.add('is-invalid');
+        document.getElementById('err-subject').style.display = 'block';
+        isValid = false;
+      }
+
+      // Validation 4: Message
+      if (message.value.trim().length < 5) {
+        message.classList.add('is-invalid');
+        document.getElementById('err-message').style.display = 'block';
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtnText.textContent = 'Αποστολή σε εξέλιξη...';
+
+      // [ADMIN-PANEL-HOOK] Structured Message Payload
+      const messagePayload = {
+        id: 'msg_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6),
+        fullName: fullName.value.trim(),
+        email: email.value.trim().toLowerCase(),
+        category: subject.value,
+        categoryLabel: subject.options[subject.selectedIndex].text,
+        message: message.value.trim(),
+        createdAt: new Date().toISOString(),
+        status: 'unread'
+      };
+
+      try {
+        // 1. Call async API dispatcher
+        await submitContactForm(messagePayload);
+
+        // 2. Persist in local storage for Admin Panel
+        saveMessageToInbox(messagePayload);
+
+        // 3. UI feedback
+        toast.style.display = 'block';
+        toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        event.target.reset();
+
+      } catch (error) {
+        console.error('Submission error:', error);
+        alert('Παρουσιάστηκε σφάλμα κατά την αποστολή. Παρακαλούμε δοκιμάστε ξανά.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Αποστολή μηνύματος';
+      }
+    }
+
+    // ========================================================================
+    // MODAL TRACK DIALOGS (ΕΣΔΙ, ΣΥΜΒΟΛΑΙΟΓΡΑΦΟΙ, ΝΣΚ)
+    // ========================================================================
+    const tracksModalData = {
+      'esdi-civil': {
+        title: 'ΕΣΔΙ • Πολιτική & Ποινική Δικαιοσύνη',
+        badge: 'Εθνική Σχολή Δικαστικών Λειτουργών',
+        desc: 'Συστηματικό πλάνο μελέτης για Αστικό, Ποινικό και τις αντίστοιχες Δικονομίες.',
+        details: [
+          '<strong>Εξεταστέα Ύλη:</strong> Αστικό Δίκαιο (Γενικές Αρχές, Ενοχικό, Εμπράγματο, Οικογενειακό, Κληρονομικό), Πολιτική Δικονομία, Ποινικό Δίκαιο (Γενικό & Ειδικό Μέρος), Ποινική Δικονομία.',
+          '<strong>Νομολογιακή Επεξεργασία:</strong> Ανάλυση πρόσφατων κρίσεων της Ολομέλειας και των Τμημάτων του Αρείου Πάγου.',
+          '<strong>Μεθοδολογία Εξετάσεων:</strong> Τεχνική υπαγωγής πραγματικών περιστατικών στον κανόνα δικαίου και γραπτές προσομοιώσεις υπό συνθήκες διαγωνισμού.'
+        ]
+      },
+      'esdi-admin': {
+        title: 'ΕΣΔΙ • Διοικητική Δικαιοσύνη',
+        badge: 'Εθνική Σχολή Δικαστικών Λειτουργών',
+        desc: 'Στοχευμένη οργάνωση Συνταγματικού, Γενικού Διοικητικού Δικαίου και Ακυρωτικού Ελέγχου.',
+        details: [
+          '<strong>Εξεταστέα Ύλη:</strong> Συνταγματικό Δίκαιο & Ατομικά Δικαιώματα, Γενικό Διοικητικό Δίκαιο, Κώδικας Διοικητικής Διαδικασίας, Διοικητική Δικονομία (ΚΔΔ) & Ακυρωτικός Έλεγχος (Π.Δ. 18/1989).',
+          '<strong>Νομολογία ΣτΕ:</strong> Συσχέτιση θεωρίας με τις πλέον κρίσιμες ακυρωτικές αποφάσεις του Συμβουλίου της Επικρατείας.',
+          '<strong>Φορολογικό & Δημοσιονομικό:</strong> Εξειδικευμένοι κύκλοι ουσιαστικού διοικητικού και φορολογικού δικαίου.'
+        ]
+      },
+      'notaries': {
+        title: 'Διαγωνισμός Συμβολαιογράφων & Ειρηνοδικών',
+        badge: 'Εξειδικευμένοι Κύκλοι',
+        desc: 'Εμβάθυνση στο Εμπράγματο, Κληρονομικό και Ενοχικό Δίκαιο με ακρίβεια συμβατικών σχημάτων.',
+        details: [
+          '<strong>Ειδικό Αστικό Δίκαιο:</strong> Σύνθετες μεταβιβάσεις ακινήτων, εμπράγματα βάρη, διαθήκες, αποδοχές κληρονομίας και δωρεές εν ζωή/αιτία θανάτου.',
+          '<strong>Κτηματολογικό Δίκαιο:</strong> Εγγραπτέες πράξεις, διορθώσεις αρχικών εγγραφών και νομικός έλεγχος τίτλων.',
+          '<strong>Συμβολαιογραφικός Κώδικας:</strong> Ακυρότητες, ευθύνη συμβολαιογράφου και πρακτική σύνταξης συμβολαιογραφικών εγγράφων.'
+        ]
+      },
+      'nsk': {
+        title: 'Νομικό Συμβούλιο του Κράτους (ΝΣΚ)',
+        badge: 'Ανώτατο Επίπεδο Νομικής Υπεράσπισης',
+        desc: 'Υψηλού επιπέδου προετοιμασία για την υπεράσπιση των συμφερόντων του Δημοσίου.',
+        details: [
+          '<strong>Δημόσιες Συμβάσεις & Προμήθειες:</strong> Ν. 4412/2016, προσυμβατικός έλεγχος Ελεγκτικού Συνεδρίου και διαφορές εκτέλεσης.',
+          '<strong>Γνωμοδοτική Διαδικασία:</strong> Τεχνική σύνταξης γνωμοδοτήσεων για υπουργεία και ανεξάρτητες αρχές.',
+          '<strong>Δικαστική Υπεράσπιση:</strong> Αγωγές αποζημίωσης κατά του Δημοσίου (άρθρα 105-106 ΕισΝΑΚ) και εκπροσώπηση σε εθνικά/ευρωπαϊκά δικαστήρια.'
+        ]
+      },
+      'general': {
+        title: 'Ολοκληρωμένο Πλάνο Προετοιμασίας Διαγωνισμών',
+        badge: 'Μεθοδολογία Μελέτης',
+        desc: 'Η επιτυχία στις γραπτές εξετάσεις βασίζεται στη μεθοδική διαχείριση της ύλης και την ενεργητική εμπέδωση.',
+        details: [
+          '<strong>Κατάτμηση Ύλης & Εβδομαδιαία Ορόσημα:</strong> Χωρισμός των κωδίκων σε διαχειρίσιμες θεματικές ενότητες με σαφή όρια.',
+          '<strong>Ανάλυση Πρακτικών Θεμάτων:</strong> Επίλυση προηγούμενων θεμάτων εξετάσεων με αυστηρή νομική ορολογία.',
+          '<strong>Κυκλικές Επαναλήψεις:</strong> Τακτικό σύστημα ανακεφαλαίωσης για διαρκή ετοιμότητα μέχρι την ημέρα του διαγωνισμού.'
+        ]
+      }
+    };
+
+    function openTrackModal(trackKey) {
+      const data = tracksModalData[trackKey];
+      if (!data) return;
+      const content = document.getElementById('trackModalContent');
+      content.innerHTML = `
+        <span class="category-overline" style="margin-bottom: 0.4rem;">${data.badge}</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy); margin-bottom: 0.8rem;">${data.title}</h3>
+        <p style="color: var(--color-text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">${data.desc}</p>
+        <div style="background: var(--color-bg-page); border-left: 3px solid var(--color-gold); padding: 1.2rem; border-radius: 4px; margin-bottom: 1.5rem;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.92rem; color: #334155;">
+            ${data.details.map(item => `<li style="line-height: 1.6;">• ${item}</li>`).join('')}
+          </ul>
+        </div>
+        <div style="text-align: right;">
+          <a href="#contact" onclick="closeTrackModal()" class="btn-brand-primary" style="padding: 0.75rem 1.6rem; font-size: 0.82rem;">
+            Εκδηλωση Ενδιαφεροντος &rarr;
+          </a>
+        </div>
+      `;
+      document.getElementById('trackModalBackdrop').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTrackModal() {
+      document.getElementById('trackModalBackdrop').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Initialize content from State
+    window.addEventListener('DOMContentLoaded', () => {
+      applyCmsContent(siteContent);
+    });
+  </script>
+</body>
+</html>
