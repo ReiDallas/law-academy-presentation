@@ -1275,6 +1275,33 @@
     }
 
 
+/* Hero Student Callout Frame (Ενδιάμεσα από Φοιτητές Νομικής και Η Νομική Απαιτεί...) */
+    .hero-student-quote-frame {
+      background: #FAF9F7;
+      border: 1px solid var(--color-gold-border);
+      border-left: 4px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 1.4rem 1.8rem;
+      margin: 1.2rem 0 1.8rem 0;
+      box-shadow: 0 4px 15px rgba(169, 121, 55, 0.08);
+      position: relative;
+    }
+    .student-quote-title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .student-quote-sub {
+      font-size: 0.96rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
     /* DATASET ID BADGES */
     .brand-dataset-id {
       display: inline-flex;
@@ -1536,27 +1563,6 @@
 <body>
 
   <!-- ========================================================================
-       FIRST ENTRANCE BANNER (ΤΟ ΠΡΩΤΟ ΠΡΑΓΜΑ ΠΟΥ ΒΛΕΠΕΙ Ο ΕΠΙΣΚΕΠΤΗΣ)
-       ======================================================================== -->
-  <section class="premier-entrance-banner" id="first-banner" aria-label="Εισαγωγή Φοιτητών Νομικής">
-    <div class="container premier-entrance-container">
-      <div class="banner-question-pill">ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ;</div>
-      <div class="banner-framed-wrapper">
-        <h2 class="banner-framed-heading">
-          «Είσαι φοιτητής Νομικής; Από το πρώτο έτος έως το τελευταίο...»
-        </h2>
-        <p class="banner-framed-subtext">
-          Η Νομική Ακαδημία στηρίζει κάθε στάδιο της πανεπιστημιακής σου πορείας με δομημένη μεθοδολογία, κατανόηση εννοιών και πρακτική επίλυση θεμάτων.
-        </p>
-      </div>
-      <a href="#students" class="banner-scroll-indicator" title="Κάνε scroll προς τα κάτω για να δεις τη σελίδα">
-        <span>Κάνε scroll για να ανακαλύψεις τη σελίδα</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- ========================================================================
        1. OFFICIAL EUROPEAN UNION & ΕΣΠΑ / ΔΥΠΑ CO-FUNDING STRIP
        ======================================================================== -->
   <div class="eu-funding-bar">
@@ -1695,6 +1701,18 @@
           
           <!-- Αριστερή Στήλη: Copywriting & CTAs -->
           <div class="hero-text-side">
+            <span class="category-overline" data-cms-key="hero.category">ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ</span>
+
+            <!-- Πλαίσιο: «Είσαι φοιτητής Νομικής; Από το πρώτο έτος έως το τελευταίο...» -->
+            <div class="hero-student-quote-frame">
+              <div class="student-quote-title">
+                «Είσαι φοιτητής Νομικής; Από το πρώτο έτος έως το τελευταίο...»
+              </div>
+              <p class="student-quote-sub">
+                Η Νομική Ακαδημία στηρίζει κάθε στάδιο της πανεπιστημιακής σου πορείας με δομημένη μεθοδολογία, κατανόηση εννοιών και πρακτική επίλυση θεμάτων.
+              </p>
+            </div>
+
             <h1 class="hero-main-title" data-cms-key="hero.title">Η Νομική απαιτεί κάτι περισσότερο από διάβασμα.</h1>
             
             <div class="brand-divider">
