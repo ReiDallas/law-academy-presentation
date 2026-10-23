@@ -6,6 +6,10 @@
   <title>Law Academy | Νομική Εκπαίδευση & Προετοιμασία Διαγωνισμών</title>
   <meta name="description" content="Κέντρο νομικής σκέψης, οργανωμένης μεθοδολογίας και συστηματικής προετοιμασίας για φοιτητές Νομικής και υποψηφίους δικαστικών διαγωνισμών.">
   
+  <!-- Law Academy Dataset ID Metadata -->
+  <meta name="dataset-id" content="1147 9902 575 5252">
+  <meta name="law-academy-dataset-id" content="1147 9902 575 5252">
+  <meta property="law-academy:dataset-id" content="1147 9902 575 5252">
   <!-- Open Graph -->
   <meta property="og:title" content="Law Academy | Νομική Εκπαίδευση & Προετοιμασία Διαγωνισμών">
   <meta property="og:description" content="Η Νομική απαιτεί κάτι περισσότερο από διάβασμα. Συστηματική προετοιμασία ΕΣΔΙ, Συμβολαιογράφων και φοιτητών Νομικής.">
@@ -1270,6 +1274,200 @@
       gap: 1rem;
     }
 
+
+    /* DATASET ID BADGES */
+    .brand-dataset-id {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(169, 121, 55, 0.12);
+      border: 1px solid var(--color-gold-border);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      letter-spacing: 0.06em;
+      margin-top: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .brand-dataset-id span {
+      color: var(--color-gold);
+      font-weight: 800;
+    }
+    .eu-dataset-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(169, 121, 55, 0.15);
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold-warm);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       ΕΝΟΤΗΤΑ ΒΙΟΓΡΑΦΙΚΩΝ & ΕΠΙΣΤΗΜΟΝΙΚΗΣ ΟΜΑΔΑΣ (FACULTY & CVS)
+       ========================================================================== */
+    .section-faculty {
+      padding: 6.5rem 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--color-border-subtle);
+      position: relative;
+    }
+    .faculty-intro-wrap {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 3.8rem;
+    }
+    .faculty-intro-wrap h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.6vw, 3rem);
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .faculty-intro-wrap p {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+    }
+
+    .faculty-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .faculty-card-box {
+      background: var(--color-bg-page);
+      border: 1px solid var(--color-border-subtle);
+      border-top: 3.5px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 2.2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .faculty-card-box:hover {
+      background: #FFFFFF;
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .faculty-avatar-frame {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid var(--color-gold);
+      padding: 3px;
+      background: #FFFFFF;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 12px rgba(169, 121, 55, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .faculty-avatar-frame .faculty-monogram {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--color-navy);
+      color: var(--color-gold-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    .faculty-field-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--color-navy);
+      background: rgba(14, 31, 47, 0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
+      align-self: flex-start;
+      letter-spacing: 0.04em;
+    }
+    .faculty-card-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 0.4rem;
+    }
+    .faculty-credentials {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    .faculty-bio-snippet {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+    .faculty-status-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      color: #64748B;
+      font-weight: 600;
+      border-top: 1px dashed var(--color-border-subtle);
+      padding-top: 0.8rem;
+      width: 100%;
+    }
+    .faculty-status-indicator::before {
+      content: '●';
+      color: var(--color-gold);
+      font-size: 0.65rem;
+    }
+
+    /* Client CV Upload Callout Banner */
+    .faculty-client-notice {
+      background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy) 100%);
+      border: 1px solid var(--color-gold);
+      border-radius: var(--radius-sm);
+      padding: 2rem 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-card);
+    }
+    .faculty-notice-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-gold-warm);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+    .faculty-notice-text p {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.6;
+      max-width: 720px;
+    }
+
     /* ==========================================================================
        RESPONSIVE RULES (MOBILE & TABLET)
        ========================================================================== */
@@ -1320,7 +1518,7 @@
           </g>
         </svg>
         <div class="eu-funding-text">
-          <strong>Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης</strong> | <span>NextGenerationEU • ΕΣΠΑ 2021-2027 • Προγράμματα ΔΥΠΑ (πρ. ΟΑΕΔ)</span>
+          <strong>Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης</strong> | <span>NextGenerationEU • ΕΣΠΑ 2021-2027 • Dataset ID: 1147 9902 575 5252 • ΔΥΠΑ (ΟΑΕΔ)</span>
         </div>
       </div>
 
@@ -1358,6 +1556,7 @@
         <li><a href="#students">Φοιτητές Νομικής</a></li>
         <li><a href="#competitions">Δικαστικοί Διαγωνισμοί</a></li>
         <li><a href="#about">Η Law Academy</a></li>
+        <li><a href="#faculty">Βιογραφικά</a></li>
         <li><a href="#eu-info">ΕΣΠΑ & ΔΥΠΑ</a></li>
         <li><a href="#contact">Επικοινωνία</a></li>
       </ul>
@@ -1391,6 +1590,7 @@
           <li><a href="#students" onclick="toggleMobileNav(false)">Φοιτητές Νομικής</a></li>
           <li><a href="#competitions" onclick="toggleMobileNav(false)">Δικαστικοί Διαγωνισμοί</a></li>
           <li><a href="#about" onclick="toggleMobileNav(false)">Η Law Academy</a></li>
+          <li><a href="#faculty" onclick="toggleMobileNav(false)">Βιογραφικά</a></li>
           <li><a href="#eu-info" onclick="toggleMobileNav(false)">Προγράμματα ΕΣΠΑ / ΔΥΠΑ</a></li>
           <li><a href="#contact" onclick="toggleMobileNav(false)">Επικοινωνία</a></li>
         </ul>
@@ -1480,6 +1680,7 @@
             </div>
             <div class="hero-brand-title">LAW ACADEMY</div>
             <div class="hero-brand-subtitle">Κεντρο Νομικης Μεθοδολογιας</div>
+            <div class="brand-dataset-id"><span>DATASET ID:</span> 1147 9902 575 5252</div>
 
             <div class="brand-divider centered">
               <span class="divider-line"></span>
@@ -1679,6 +1880,117 @@
       </div>
     </section>
 
+
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 3Β: ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ & ΒΙΟΓΡΑΦΙΚΑ (FACULTY & CVS)
+         * Πλήρης δομή για την ανάρτηση των βιογραφικών του πελάτη
+         ======================================================================== -->
+    <section id="faculty" class="section-faculty">
+      <div class="container">
+        <div class="faculty-intro-wrap">
+          <span class="category-overline">ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ & ΒΙΟΓΡΑΦΙΚΑ</span>
+          <h2>Ακαδημαϊκή Υπεροχή & Νομική Καθοδήγηση</h2>
+          <div class="brand-divider centered">
+            <span class="divider-line"></span>
+            <span class="divider-star">✦</span>
+            <span class="divider-line"></span>
+          </div>
+          <p>
+            Διακεκριμένοι νομικοί επιστήμονες, εισηγητές και λειτουργοί της δικαιοσύνης καθοδηγούν κάθε στάδιο της προετοιμασίας σου. Εδώ συγκεντρώνονται τα βιογραφικά και οι εξειδικεύσεις της επιστημονικής ομάδας του LAW ACADEMY.
+          </p>
+        </div>
+
+        <div class="faculty-cards-grid">
+          <!-- Θέση Βιογραφικού 1: Αστικό & Δικονομικό Δίκαιο -->
+          <div class="faculty-card-box">
+            <div>
+              <div class="faculty-avatar-frame">
+                <div class="faculty-monogram">ΑΣ</div>
+              </div>
+              <span class="faculty-field-tag">ΑΣΤΙΚΟ &bull; ΠΟΛΙΤΙΚΗ ΔΙΚΟΝΟΜΙΑ</span>
+              <h3>Εισηγητής Αστικού Δικαίου</h3>
+              <div class="faculty-credentials">Διδάκτωρ Νομικής (Δ.Ν.) &bull; Δικηγόρος παρ' Αρείω Πάγω</div>
+              <p class="faculty-bio-snippet">
+                Εξειδίκευση στις Γενικές Αρχές, το Ενοχικό και Εμπράγματο Δίκαιο. Μεθοδολογία επίλυσης πρακτικών θεμάτων και εμβάθυνση στη νομολογία του Αρείου Πάγου για υποψηφίους ΕΣΔΙ.
+              </p>
+            </div>
+            <div class="faculty-status-indicator">
+              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+            </div>
+          </div>
+
+          <!-- Θέση Βιογραφικού 2: Ποινικό Δίκαιο & Ποινική Δικονομία -->
+          <div class="faculty-card-box">
+            <div>
+              <div class="faculty-avatar-frame">
+                <div class="faculty-monogram">ΠΔ</div>
+              </div>
+              <span class="faculty-field-tag">ΠΟΙΝΙΚΟ &bull; ΠΟΙΝΙΚΗ ΔΙΚΟΝΟΜΙΑ</span>
+              <h3>Εισηγητής Ποινικών Επιστημών</h3>
+              <div class="faculty-credentials">Νομικός Ερευνητής &bull; Ειδικός Εισηγητής Νομολογίας</div>
+              <p class="faculty-bio-snippet">
+                Συστηματική ανάλυση του Γενικού και Ειδικού Μέρους του Ποινικού Κώδικα και της Ποινικής Δικονομίας, με έμφαση στις συνδυαστικές ποινικές υποθέσεις και διαγωνιστικές προσομοιώσεις.
+              </p>
+            </div>
+            <div class="faculty-status-indicator">
+              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+            </div>
+          </div>
+
+          <!-- Θέση Βιογραφικού 3: Δημόσιο & Διοικητικό Δίκαιο -->
+          <div class="faculty-card-box">
+            <div>
+              <div class="faculty-avatar-frame">
+                <div class="faculty-monogram">ΔΔ</div>
+              </div>
+              <span class="faculty-field-tag">ΔΗΜΟΣΙΟ &bull; ΔΙΟΙΚΗΤΙΚΗ ΔΙΚΑΙΟΣΥΝΗ</span>
+              <h3>Εισηγητής Δημοσίου Δικαίου</h3>
+              <div class="faculty-credentials">Ειδικός Επιστήμονας Διοικητικού Δικαίου & Ακυρωτικού Ελέγχου</div>
+              <p class="faculty-bio-snippet">
+                Εμβάθυνση στο Συνταγματικό Δίκαιο, τη Διοικητική Δικονομία και τις ακυρωτικές διαφορές του ΣτΕ. Στοχευμένη προετοιμασία για τη Διοικητική κατεύθυνση της ΕΣΔΙ και το ΝΣΚ.
+              </p>
+            </div>
+            <div class="faculty-status-indicator">
+              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+            </div>
+          </div>
+
+          <!-- Θέση Βιογραφικού 4: Συμβολαιογραφικό & Κτηματολογικό Δίκαιο -->
+          <div class="faculty-card-box">
+            <div>
+              <div class="faculty-avatar-frame">
+                <div class="faculty-monogram">ΣΔ</div>
+              </div>
+              <span class="faculty-field-tag">ΣΥΜΒΟΛΑΙΟΓΡΑΦΙΚΟ &bull; ΚΤΗΜΑΤΟΛΟΓΙΟ</span>
+              <h3>Εισηγητής Συμβολαιογραφικών Διαγωνισμών</h3>
+              <div class="faculty-credentials">Εξειδικευμένος Σύμβουλος Εμπραγμάτου & Κληρονομικού Δικαίου</div>
+              <p class="faculty-bio-snippet">
+                Εξειδίκευση στις εμπράγματες συμβάσεις, τις αποδοχές κληρονομίας, τον κτηματολογικό έλεγχο τίτλων και την πρακτική σύνταξη συμβολαιογραφικών πράξεων υψηλής ακρίβειας.
+              </p>
+            </div>
+            <div class="faculty-status-indicator">
+              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ενημερωτικό Banner για την αποστολή των βιογραφικών -->
+        <div class="faculty-client-notice">
+          <div class="faculty-notice-text">
+            <h4>ΥΠΟΔΟΜΗ ΑΝΑΡΤΗΣΗΣ ΒΙΟΓΡΑΦΙΚΩΝ ΣΗΜΕΙΩΜΑΤΩΝ</h4>
+            <p>
+              Η σελίδα είναι 100% προετοιμασμένη για την άμεση ενσωμάτωση των τελικών κειμένων, φωτογραφιών και ακαδημαϊκών τίτλων των εισηγητών μόλις αποσταλούν από τον πελάτη, με σύνδεση στο κεντρικό σύστημα διαχείρισης.
+            </p>
+          </div>
+          <div>
+            <a href="#contact" class="btn-brand-primary" style="background: var(--color-gold); color: var(--color-navy-dark); white-space: nowrap;">
+              <span>Αποστολή Στοιχείων &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========================================================================
          ΕΝΟΤΗΤΑ ΕΣΠΑ / ΔΥΠΑ (ΟΑΕΔ) COMPLIANCE
          ======================================================================== -->
@@ -1711,7 +2023,7 @@
           <div class="eu-program-info-box">
             <h4>Συγχρηματοδότηση Ευρωπαϊκών Εκπαιδευτικών Δράσεων & Ψηφιακής Δικαιοσύνης</h4>
             <p>
-              Τα προγράμματα εξ αποστάσεως νομικής εκπαίδευσης και ψηφιακής νομολογιακής έρευνας της Law Academy υλοποιούνται με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης μέσω του Ευρωπαϊκού Κοινωνικού Ταμείου (ΕΚΤ+), του προγράμματος <strong>NextGenerationEU / ΕΣΠΑ 2021-2027</strong> και επιταγών κατάρτισης <strong>ΔΥΠΑ (πρ. ΟΑΕΔ)</strong>.
+              Τα προγράμματα εξ αποστάσεως νομικής εκπαίδευσης και ψηφιακής νομολογιακής έρευνας της Law Academy υλοποιούνται με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης μέσω του Ευρωπαϊκού Κοινωνικού Ταμείου (ΕΚΤ+), του προγράμματος <strong>NextGenerationEU / ΕΣΠΑ 2021-2027</strong> και επιταγών κατάρτισης <strong>ΔΥΠΑ (πρ. ΟΑΕΔ)</strong>.<br><span style="display:inline-block; margin-top:8px;">Επίσημο Μητρώο Έργου &bull; <strong>Dataset ID: 1147 9902 575 5252</strong></span>
             </p>
           </div>
 
@@ -1840,6 +2152,7 @@
             <li><a href="#students">Φοιτητές Νομικής</a></li>
             <li><a href="#competitions">Δικαστικοί Διαγωνισμοί</a></li>
             <li><a href="#about">Η Law Academy</a></li>
+        <li><a href="#faculty">Βιογραφικά</a></li>
             <li><a href="#eu-info">Προγράμματα ΕΣΠΑ / ΔΥΠΑ</a></li>
             <li><a href="#contact">Επικοινωνία</a></li>
           </ul>
@@ -1890,7 +2203,7 @@
             </g>
           </svg>
           <div class="footer-eu-title">
-            <strong>Ευρωπαϊκή Ένωση</strong> &mdash; Ευρωπαϊκό Κοινωνικό Ταμείο (ΕΚΤ+) | Πρόγραμμα NextGenerationEU &bull; ΕΣΠΑ 2021-2027 &bull; ΔΥΠΑ (πρ. ΟΑΕΔ)
+            <strong>Ευρωπαϊκή Ένωση</strong> &mdash; Ευρωπαϊκό Κοινωνικό Ταμείο (ΕΚΤ+) | Πρόγραμμα NextGenerationEU &bull; ΕΣΠΑ 2021-2027 &bull; Dataset ID: 1147 9902 575 5252 &bull; ΔΥΠΑ (ΟΑΕΔ)
           </div>
         </div>
 
@@ -1920,6 +2233,11 @@
         name: "LAW ACADEMY",
         subtitle: "Ακαδημαϊκη Νομικη Μελετη",
         logo: "logo.jpg"
+      },
+      institutional: {
+        datasetId: "1147 9902 575 5252",
+        datasetIdRaw: "114799025755252",
+        authority: "Ευρωπαϊκή Ένωση / ΕΣΠΑ / ΔΥΠΑ"
       },
       hero: {
         category: "ΦΟΙΤΗΤΕΣ ΝΟΜΙΚΗΣ",
