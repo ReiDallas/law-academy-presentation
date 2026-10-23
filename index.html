@@ -1312,7 +1312,7 @@
     }
 
     /* ==========================================================================
-       ΕΝΟΤΗΤΑ ΒΙΟΓΡΑΦΙΚΩΝ & ΕΠΙΣΤΗΜΟΝΙΚΗΣ ΟΜΑΔΑΣ (FACULTY & CVS)
+       ΕΝΟΤΗΤΑ ΒΙΟΓΡΑΦΙΚΩΝ: DUAL EXECUTIVE SHOWCASE (ΔΕΞΙΑ & ΑΡΙΣΤΕΡΑ)
        ========================================================================== */
     .section-faculty {
       padding: 6.5rem 0;
@@ -1339,136 +1339,180 @@
       line-height: 1.8;
     }
 
-    .faculty-cards-grid {
+    /* Dual Grid: Αριστερά & Δεξιά */
+    .faculty-dual-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 1.8rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: stretch;
+      margin-bottom: 3.5rem;
     }
-    .faculty-card-box {
+    .faculty-exec-card {
       background: var(--color-bg-page);
       border: 1px solid var(--color-border-subtle);
-      border-top: 3.5px solid var(--color-gold);
+      border-top: 4px solid var(--color-navy);
       border-radius: var(--radius-sm);
-      padding: 2.2rem 1.8rem;
+      padding: 2.8rem 2.4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.3s ease;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
     }
-    .faculty-card-box:hover {
+    .faculty-exec-card.card-left {
+      border-top-color: var(--color-navy);
+    }
+    .faculty-exec-card.card-right {
+      border-top-color: var(--color-gold);
+    }
+    .faculty-exec-card:hover {
       background: #FFFFFF;
       border-color: var(--color-gold);
       box-shadow: var(--shadow-hover);
-      transform: translateY(-4px);
+      transform: translateY(-5px);
     }
-    .faculty-avatar-frame {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid var(--color-gold);
-      padding: 3px;
-      background: #FFFFFF;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 4px 12px rgba(169, 121, 55, 0.15);
+
+    /* Header Profile Info inside Card */
+    .exec-card-header {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.6rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid var(--color-border-subtle);
     }
-    .faculty-avatar-frame .faculty-monogram {
+    .exec-photo-frame {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 2.5px solid var(--color-gold);
+      padding: 3px;
+      background: #FFFFFF;
+      box-shadow: 0 6px 18px rgba(169, 121, 55, 0.22);
+      flex-shrink: 0;
+    }
+    .exec-photo-frame img {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background: var(--color-navy);
-      color: var(--color-gold-warm);
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .exec-meta-header {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 800;
+      flex-direction: column;
     }
-    .faculty-field-tag {
+    .exec-field-badge {
       display: inline-block;
-      font-size: 0.72rem;
       font-family: var(--font-mono);
-      font-weight: 700;
-      color: var(--color-navy);
-      background: rgba(14, 31, 47, 0.08);
-      padding: 0.2rem 0.6rem;
-      border-radius: 3px;
-      margin-bottom: 0.6rem;
-      align-self: flex-start;
-      letter-spacing: 0.04em;
-    }
-    .faculty-card-box h3 {
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--color-navy);
-      margin-bottom: 0.4rem;
-    }
-    .faculty-credentials {
-      font-size: 0.85rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--color-gold);
-      margin-bottom: 0.8rem;
-      line-height: 1.4;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
     }
-    .faculty-bio-snippet {
-      font-size: 0.92rem;
+    .exec-person-name {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+    .exec-person-title {
+      font-size: 0.88rem;
+      font-weight: 600;
       color: var(--color-text-muted);
-      line-height: 1.65;
-      margin-bottom: 1.4rem;
+      line-height: 1.45;
     }
-    .faculty-status-indicator {
+
+    /* Credentials Pill Tags */
+    .exec-credentials-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.6rem;
+    }
+    .cred-tag {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.75rem;
-      color: #64748B;
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-subtle);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.76rem;
       font-weight: 600;
-      border-top: 1px dashed var(--color-border-subtle);
-      padding-top: 0.8rem;
-      width: 100%;
+      color: var(--color-navy);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
     }
-    .faculty-status-indicator::before {
-      content: '●';
+    .cred-tag span.bullet {
       color: var(--color-gold);
-      font-size: 0.65rem;
+      font-size: 0.75rem;
     }
 
-    /* Client CV Upload Callout Banner */
-    .faculty-client-notice {
-      background: linear-gradient(135deg, var(--color-navy-dark) 0%, var(--color-navy) 100%);
-      border: 1px solid var(--color-gold);
-      border-radius: var(--radius-sm);
-      padding: 2rem 2.4rem;
+    /* Bio Text Blocks */
+    .exec-bio-paragraphs {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.75;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.8rem;
+    }
+    .exec-bio-paragraphs p {
+      margin: 0;
+    }
+
+    /* Card Footer Status & Action */
+    .exec-card-footer {
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 1.2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 2rem;
       flex-wrap: wrap;
-      color: #FFFFFF;
-      box-shadow: var(--shadow-card);
+      gap: 0.8rem;
     }
-    .faculty-notice-text h4 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
+    .exec-footer-city {
+      font-size: 0.82rem;
       font-weight: 700;
-      color: var(--color-gold-warm);
-      letter-spacing: 0.06em;
-      margin-bottom: 0.4rem;
+      color: var(--color-navy);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
-    .faculty-notice-text p {
-      font-size: 0.92rem;
-      color: #CBD5E1;
-      line-height: 1.6;
-      max-width: 720px;
+    .exec-footer-city span {
+      color: var(--color-gold);
+    }
+    .exec-footer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .exec-footer-btn:hover {
+      color: var(--color-navy);
     }
 
-    /* ==========================================================================
+    @media (max-width: 960px) {
+      .faculty-dual-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .exec-card-header { flex-direction: column; align-items: flex-start; text-align: left; }
+      .faculty-exec-card { padding: 2rem 1.6rem; }
+    }
+
+/* ==========================================================================
        RESPONSIVE RULES (MOBILE & TABLET)
        ========================================================================== */
     @media (max-width: 900px) {
@@ -1885,109 +1929,129 @@
          ΕΝΟΤΗΤΑ 3Β: ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ & ΒΙΟΓΡΑΦΙΚΑ (FACULTY & CVS)
          * Πλήρης δομή για την ανάρτηση των βιογραφικών του πελάτη
          ======================================================================== -->
+    <!-- ========================================================================
+         ΕΝΟΤΗΤΑ 3Β: ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ & ΒΙΟΓΡΑΦΙΚΑ (FACULTY & CVS)
+         * Αριστερά: Αστέριος Χατζημίχος
+         * Δεξιά: Βασίλης Βασιλικόπουλος
+         ======================================================================== -->
     <section id="faculty" class="section-faculty">
       <div class="container">
         <div class="faculty-intro-wrap">
           <span class="category-overline">ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ & ΒΙΟΓΡΑΦΙΚΑ</span>
-          <h2>Ακαδημαϊκή Υπεροχή & Νομική Καθοδήγηση</h2>
+          <h2>Επιστημονική Καθοδήγηση & Εξειδίκευση</h2>
           <div class="brand-divider centered">
             <span class="divider-line"></span>
             <span class="divider-star">✦</span>
             <span class="divider-line"></span>
           </div>
           <p>
-            Διακεκριμένοι νομικοί επιστήμονες, εισηγητές και λειτουργοί της δικαιοσύνης καθοδηγούν κάθε στάδιο της προετοιμασίας σου. Εδώ συγκεντρώνονται τα βιογραφικά και οι εξειδικεύσεις της επιστημονικής ομάδας του LAW ACADEMY.
+            Διακεκριμένοι μάχιμοι δικηγόροι και πανεπιστημιακοί ερευνητές καθοδηγούν κάθε στάδιο της νομικής σου μελέτης με αποδεδειγμένη εμπειρία, επιστημονική αρτιότητα και σύγχρονη μεθοδολογική προσέγγιση.
           </p>
         </div>
 
-        <div class="faculty-cards-grid">
-          <!-- Θέση Βιογραφικού 1: Αστικό & Δικονομικό Δίκαιο -->
-          <div class="faculty-card-box">
+        <!-- Dual Executive Showcase: Αριστερά & Δεξιά στο Scroll -->
+        <div class="faculty-dual-grid">
+          
+          <!-- ΑΡΙΣΤΕΡΑ: Αστέριος Χατζημίχος -->
+          <div class="faculty-exec-card card-left">
             <div>
-              <div class="faculty-avatar-frame">
-                <div class="faculty-monogram">ΑΣ</div>
+              <div class="exec-card-header">
+                <div class="exec-photo-frame">
+                  <img src="images/chatzimichos.jpg" alt="Αστέριος Χατζημίχος &bull; Δικηγόρος - Υποψήφιος Διδάκτωρ ΑΠΘ">
+                </div>
+                <div class="exec-meta-header">
+                  <span class="exec-field-badge">ΠΟΙΝΙΚΕΣ & ΕΓΚΛΗΜΑΤΟΛΟΓΙΚΕΣ ΕΠΙΣΤΗΜΕΣ</span>
+                  <h3 class="exec-person-name">Αστέριος Χατζημίχος</h3>
+                  <div class="exec-person-title">Δικηγόρος &bull; Υποψήφιος Διδάκτωρ Ποινικών και Εγκληματολογικών Επιστημών Νομικής ΑΠΘ</div>
+                </div>
               </div>
-              <span class="faculty-field-tag">ΑΣΤΙΚΟ &bull; ΠΟΛΙΤΙΚΗ ΔΙΚΟΝΟΜΙΑ</span>
-              <h3>Εισηγητής Αστικού Δικαίου</h3>
-              <div class="faculty-credentials">Διδάκτωρ Νομικής (Δ.Ν.) &bull; Δικηγόρος παρ' Αρείω Πάγω</div>
-              <p class="faculty-bio-snippet">
-                Εξειδίκευση στις Γενικές Αρχές, το Ενοχικό και Εμπράγματο Δίκαιο. Μεθοδολογία επίλυσης πρακτικών θεμάτων και εμβάθυνση στη νομολογία του Αρείου Πάγου για υποψηφίους ΕΣΔΙ.
-              </p>
+
+              <div class="exec-credentials-tags">
+                <span class="cred-tag"><span class="bullet">◆</span> Πτυχιούχος Νομικής ΑΠΘ</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Μεταπτυχιακό Ποινικού Δικαίου (Άριστα 9)</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Τμήμα Ιστορίας & Αρχαιολογίας ΑΠΘ</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Δικηγορικό Γραφείο Λάρισας</span>
+              </div>
+
+              <div class="exec-bio-paragraphs">
+                <p>
+                  Ο κ. Αστέριος Χατζημίχος είναι δικηγόρος και Υποψήφιος Διδάκτωρ Ποινικών και Εγκληματολογικών Επιστημών της Νομικής Σχολής του Αριστοτελείου Πανεπιστημίου Θεσσαλονίκης. Είναι πτυχιούχος της Νομικής Σχολής ΑΠΘ και κάτοχος Μεταπτυχιακού Διπλώματος Ειδίκευσης στο Ποινικό Δίκαιο και την Εγκληματολογία της Νομικής ΑΠΘ, με βαθμό «Άριστα» (9). Παράλληλα με τη διδακτορική του έρευνα, σπουδάζει ως προπτυχιακός φοιτητής στο Τμήμα Ιστορίας και Αρχαιολογίας της Φιλοσοφικής Σχολής του ΑΠΘ.
+                </p>
+                <p>
+                  Έχει συμμετάσχει σε πολλές ημερίδες και εκδηλώσεις νομικού ενδιαφέροντος, διατηρεί συνεργασία με εκπομπές της Θεσσαλία TV, ενώ αρθρογραφεί τακτικά σε εφημερίδες και περιοδικά. Τα επιστημονικά του ενδιαφέροντα κινούνται στον χώρο του Ποινικού Δικαίου, της Ιστορίας του Δικαίου και της Εγκληματολογίας.
+                </p>
+                <p>
+                  Δικηγόρος Λάρισας, διατηρεί από το 2020 δικό του δικηγορικό γραφείο στο κέντρο της πόλης, επί της οδού Ασκληπιού 21.
+                </p>
+              </div>
             </div>
-            <div class="faculty-status-indicator">
-              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+
+            <div class="exec-card-footer">
+              <div class="exec-footer-city">
+                <span>📍</span> Έδρα: Λάρισα (Ασκληπιού 21)
+              </div>
+              <a href="#contact" class="exec-footer-btn">
+                <span>Επικοινωνία με τον Εισηγητή &rarr;</span>
+              </a>
             </div>
           </div>
 
-          <!-- Θέση Βιογραφικού 2: Ποινικό Δίκαιο & Ποινική Δικονομία -->
-          <div class="faculty-card-box">
+          <!-- ΔΕΞΙΑ: Βασίλης Βασιλικόπουλος -->
+          <div class="faculty-exec-card card-right">
             <div>
-              <div class="faculty-avatar-frame">
-                <div class="faculty-monogram">ΠΔ</div>
+              <div class="exec-card-header">
+                <div class="exec-photo-frame">
+                  <img src="images/vasilikopoulos.jpg" alt="Βασίλης Βασιλικόπουλος &bull; Δικηγόρος Θεσσαλονίκης">
+                </div>
+                <div class="exec-meta-header">
+                  <span class="exec-field-badge">ΑΣΤΙΚΟ, ΕΜΠΟΡΙΚΟ & ΕΤΑΙΡΙΚΟ ΔΙΚΑΙΟ</span>
+                  <h3 class="exec-person-name">Βασίλης Βασιλικόπουλος</h3>
+                  <div class="exec-person-title">Δικηγόρος ΔΣΘ &bull; LL.M. Δίκαιο Επιχειρήσεων &bull; Μεταπτυχιακός ΕΚΠΑ</div>
+                </div>
               </div>
-              <span class="faculty-field-tag">ΠΟΙΝΙΚΟ &bull; ΠΟΙΝΙΚΗ ΔΙΚΟΝΟΜΙΑ</span>
-              <h3>Εισηγητής Ποινικών Επιστημών</h3>
-              <div class="faculty-credentials">Νομικός Ερευνητής &bull; Ειδικός Εισηγητής Νομολογίας</div>
-              <p class="faculty-bio-snippet">
-                Συστηματική ανάλυση του Γενικού και Ειδικού Μέρους του Ποινικού Κώδικα και της Ποινικής Δικονομίας, με έμφαση στις συνδυαστικές ποινικές υποθέσεις και διαγωνιστικές προσομοιώσεις.
-              </p>
+
+              <div class="exec-credentials-tags">
+                <span class="cred-tag"><span class="bullet">◆</span> Δικηγορικός Σύλλογος Θεσσαλονίκης</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Μεταπτυχιακό Δίκαιο των Επιχειρήσεων</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Νομική ΕΚΠΑ (Αστικό & Συναλλαγές)</span>
+                <span class="cred-tag"><span class="bullet">◆</span> Γλώσσες: Αγγλικά, Ιταλικά</span>
+              </div>
+
+              <div class="exec-bio-paragraphs">
+                <p>
+                  Ο Βασίλης Βασιλικόπουλος είναι Δικηγόρος στον Δικηγορικό Σύλλογο Θεσσαλονίκης από το 2025 και κάτοχος μεταπτυχιακού διπλώματος στο Δίκαιο των Επιχειρήσεων, ενώ φοιτεί ήδη σε δεύτερο μεταπτυχιακό πρόγραμμα σπουδών με αντικείμενο το Αστικό Δίκαιο και τις Σύγχρονες Οικονομικές Συναλλαγές της Νομικής του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών.
+                </p>
+                <p>
+                  Παράλληλα μιλά 2 ξένες γλώσσες (Αγγλικά και Ιταλικά) και αναλαμβάνει υποθέσεις Αστικού, Εμπορικού και Εργατικού Δικαίου, έχοντας ήδη αξιοσημείωτες επιτυχίες και εξειδίκευση στη σύνθεση σύνθετων επιχειρηματικών συμβάσεων και αστικών διαφορών.
+                </p>
+                <p>
+                  Στο πλαίσιο του LAW ACADEMY, συνδυάζει τη σύγχρονη ακαδημαϊκή μεθοδολογία με την εφαρμοσμένη δικαστηριακή πρακτική για την ουσιαστική κατανόηση των νομικών εννοιών από τους φοιτητές και υποψηφίους.
+                </p>
+              </div>
             </div>
-            <div class="faculty-status-indicator">
-              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
+
+            <div class="exec-card-footer">
+              <div class="exec-footer-city">
+                <span>📍</span> Έδρα: Θεσσαλονίκη (ΔΣΘ)
+              </div>
+              <a href="#contact" class="exec-footer-btn">
+                <span>Επικοινωνία με τον Εισηγητή &rarr;</span>
+              </a>
             </div>
           </div>
 
-          <!-- Θέση Βιογραφικού 3: Δημόσιο & Διοικητικό Δίκαιο -->
-          <div class="faculty-card-box">
-            <div>
-              <div class="faculty-avatar-frame">
-                <div class="faculty-monogram">ΔΔ</div>
-              </div>
-              <span class="faculty-field-tag">ΔΗΜΟΣΙΟ &bull; ΔΙΟΙΚΗΤΙΚΗ ΔΙΚΑΙΟΣΥΝΗ</span>
-              <h3>Εισηγητής Δημοσίου Δικαίου</h3>
-              <div class="faculty-credentials">Ειδικός Επιστήμονας Διοικητικού Δικαίου & Ακυρωτικού Ελέγχου</div>
-              <p class="faculty-bio-snippet">
-                Εμβάθυνση στο Συνταγματικό Δίκαιο, τη Διοικητική Δικονομία και τις ακυρωτικές διαφορές του ΣτΕ. Στοχευμένη προετοιμασία για τη Διοικητική κατεύθυνση της ΕΣΔΙ και το ΝΣΚ.
-              </p>
-            </div>
-            <div class="faculty-status-indicator">
-              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
-            </div>
-          </div>
+        </div>
 
-          <!-- Θέση Βιογραφικού 4: Συμβολαιογραφικό & Κτηματολογικό Δίκαιο -->
-          <div class="faculty-card-box">
-            <div>
-              <div class="faculty-avatar-frame">
-                <div class="faculty-monogram">ΣΔ</div>
-              </div>
-              <span class="faculty-field-tag">ΣΥΜΒΟΛΑΙΟΓΡΑΦΙΚΟ &bull; ΚΤΗΜΑΤΟΛΟΓΙΟ</span>
-              <h3>Εισηγητής Συμβολαιογραφικών Διαγωνισμών</h3>
-              <div class="faculty-credentials">Εξειδικευμένος Σύμβουλος Εμπραγμάτου & Κληρονομικού Δικαίου</div>
-              <p class="faculty-bio-snippet">
-                Εξειδίκευση στις εμπράγματες συμβάσεις, τις αποδοχές κληρονομίας, τον κτηματολογικό έλεγχο τίτλων και την πρακτική σύνταξη συμβολαιογραφικών πράξεων υψηλής ακρίβειας.
-              </p>
-            </div>
-            <div class="faculty-status-indicator">
-              <span>Έτοιμο προς καταχώρηση τελικού βιογραφικού</span>
-            </div>
+        <!-- Institutional Note -->
+        <div style="background: var(--color-bg-page); border: 1px solid var(--color-gold-border); border-radius: var(--radius-sm); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem;">
+          <div style="font-size: 0.95rem; color: var(--color-navy); font-weight: 600;">
+            ⚖️ <strong>Επιστημονική Ομάδα Law Academy:</strong> Συνεχής ενσωμάτωση εξειδικευμένων εισηγητών και δικαστικών λειτουργών ανά κατεύθυνση εξετάσεων.
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-gold); font-weight: 700;">
+            REGISTRY &bull; DATASET ID: 1147 9902 575 5252
           </div>
         </div>
 
-        <!-- Ενημερωτικό Banner για την αποστολή των βιογραφικών -->
-        <div class="faculty-client-notice">
-          <div class="faculty-notice-text">
-            <h4>ΥΠΟΔΟΜΗ ΑΝΑΡΤΗΣΗΣ ΒΙΟΓΡΑΦΙΚΩΝ ΣΗΜΕΙΩΜΑΤΩΝ</h4>
-            <p>
-              Η σελίδα είναι 100% προετοιμασμένη για την άμεση ενσωμάτωση των τελικών κειμένων, φωτογραφιών και ακαδημαϊκών τίτλων των εισηγητών μόλις αποσταλούν από τον πελάτη, με σύνδεση στο κεντρικό σύστημα διαχείρισης.
-            </p>
-          </div>
-          <div>
-            <a href="#contact" class="btn-brand-primary" style="background: var(--color-gold); color: var(--color-navy-dark); white-space: nowrap;">
-              <span>Αποστολή Στοιχείων &rarr;</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
