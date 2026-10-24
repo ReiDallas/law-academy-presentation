@@ -1948,7 +1948,8 @@
 
             <div class="exec-card-footer">
               <div class="exec-footer-city">
-                <span>📍</span> Έδρα: Λάρισα (Ασκληπιού 21)
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block; vertical-align:-1px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Έδρα: Λάρισα (Ασκληπιού 21)</span>
               </div>
               <a href="#contact" class="exec-footer-btn">
                 <span>Επικοινωνία με τον Εισηγητή &rarr;</span>
@@ -1992,7 +1993,8 @@
 
             <div class="exec-card-footer">
               <div class="exec-footer-city">
-                <span>📍</span> Έδρα: Θεσσαλονίκη (ΔΣΘ)
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block; vertical-align:-1px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Έδρα: Θεσσαλονίκη (ΔΣΘ)</span>
               </div>
               <a href="#contact" class="exec-footer-btn">
                 <span>Επικοινωνία με τον Εισηγητή &rarr;</span>
@@ -2004,8 +2006,9 @@
 
         <!-- Institutional Note -->
         <div style="background: var(--color-bg-page); border: 1px solid var(--color-gold-border); border-radius: var(--radius-sm); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.2rem;">
-          <div style="font-size: 0.95rem; color: var(--color-navy); font-weight: 600;">
-            ⚖️ <strong>Επιστημονική Ομάδα Law Academy:</strong> Συνεχής ενσωμάτωση εξειδικευμένων εισηγητών και δικαστικών λειτουργών ανά κατεύθυνση εξετάσεων.
+          <div style="font-size: 0.95rem; color: var(--color-navy); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+            <span><strong>Επιστημονική Ομάδα Law Academy:</strong> Συνεχής ενσωμάτωση εξειδικευμένων εισηγητών και λειτουργών της δικαιοσύνης ανά εκπαιδευτική κατεύθυνση.</span>
           </div>
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-gold); font-weight: 700;">
             Ακαδημαϊκή Υπεροχή &bull; Νομική Μεθοδολογία
@@ -2320,10 +2323,12 @@
           if (el.tagName === 'IMG') {
             el.src = value;
           } else {
-            // Αν περιέχει span ή εικονίδιο, προστατεύουμε τη δομή
+            // Αν περιέχει span ή εσωτερικό στοιχείο, προστατεύουμε IDs και εικονίδια
             const span = el.querySelector('span');
-            if (span && el.tagName === 'A') {
+            if (span && (el.tagName === 'A' || el.tagName === 'BUTTON' || el.classList.contains('btn-submit-contact') || el.classList.contains('btn-brand-primary'))) {
               span.textContent = value;
+            } else if (el.classList.contains('brand-title')) {
+              el.innerHTML = value.replace('ACADEMY', '<span>ACADEMY</span>');
             } else {
               el.textContent = value;
             }
@@ -2390,7 +2395,7 @@
       const message = document.getElementById('message');
       const toast = document.getElementById('contactToastSuccess');
       const submitBtn = document.getElementById('btnSubmitContact');
-      const submitBtnText = document.getElementById('btnSubmitText');
+      const submitBtnText = document.getElementById('btnSubmitText') || (submitBtn ? submitBtn.querySelector('span') : null) || submitBtn;
 
       let isValid = true;
 
